@@ -16,11 +16,16 @@
     "cssnano": "^4.1.10",
     "gatsby": "^2.9.11",
     "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^4.1.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
     "tailwindcss": "^1.0.4"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^1.2.0",
     "prettier": "^1.18.2"
   },
   "repository": {

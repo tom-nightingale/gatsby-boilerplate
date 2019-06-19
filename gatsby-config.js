@@ -10,5 +10,9 @@ module.exports = {
     siteUrl: `http://www.weareleague.co.uk`,
     description: `Gatsby & React boilerplate without a CMS`,
   },
-  plugins: [`gatsby-plugin-postcss`],
+  plugins: [
+    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-postcss`,    
+  ],
+  
 }
