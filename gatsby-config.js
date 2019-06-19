@@ -5,5 +5,10 @@
  */
 
 module.exports = {
-  /* Your site config here */
+  siteMetadata: {
+    title: `Gatsby Boilerplate`,
+    siteUrl: `http://www.weareleague.co.uk`,
+    description: `Gatsby & React boilerplate without a CMS`,
+  },
+  plugins: [`gatsby-plugin-postcss`],
 }

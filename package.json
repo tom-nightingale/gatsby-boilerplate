@@ -6,16 +6,19 @@
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop",
+    "develop": "gatsby clean && gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "cssnano": "^4.1.10",
     "gatsby": "^2.9.11",
+    "gatsby-plugin-postcss": "^2.0.7",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "tailwindcss": "^1.0.4"
   },
   "devDependencies": {
     "prettier": "^1.18.2"
