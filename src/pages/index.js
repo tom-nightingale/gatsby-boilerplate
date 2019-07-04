@@ -1,12 +1,31 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Header from "../components/header"
+import Img from "gatsby-image";
 
-export default () => (
-  <div style={{ color: `purple` }}>
-    <Link to="/about/">about</Link> 
-    <Header headerText="Hello Gatsby!" />
-    <p>What a world.</p>
-    <img src="https://source.unsplash.com/random/400x200" alt="" />
-  </div>
-)
+const IndexPage = props => {
+    return(
+        <div>
+            <Header headerText="Hello Gatsby!" />
+            <Link to="/about" />
+
+            <Img alt="something" title="something" fluid={props.data.imageOne.childImageSharp.fluid} />
+
+            <p>What a world.</p>
+        </div>
+    );
+}
+
+export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    imageOne: file(relativePath: { eq: "header.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;

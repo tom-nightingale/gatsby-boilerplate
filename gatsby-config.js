@@ -11,8 +11,17 @@ module.exports = {
     description: `Gatsby & React boilerplate without a CMS`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`
-    `gatsby-plugin-postcss`,    
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-postcss`,
+    {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `img`,
+          path: `${__dirname}/src/img/`
+        }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`
   ],
-  
+
 }
