@@ -6,9 +6,10 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Boilerplate`,
+    title: 'League Digital | Web Design & Digital Marketing Agency Nottingham',
+    description:
+      'League Digital are a digital design and marketing agency based in Nottingham. We work with small businesses to increase your online presence',
     siteUrl: `http://www.weareleague.co.uk`,
-    description: `Gatsby & React boilerplate without a CMS`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

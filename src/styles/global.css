@@ -4,10 +4,5 @@
 @tailwind utilities;
 
 body {
-    background: #eee;
-}
 
-h1 {
-    background: red;
-    font-size: 2rem;
 }
