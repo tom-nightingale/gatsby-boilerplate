@@ -9,7 +9,7 @@ module.exports = {
       sm: '640px',
       md: '768px',
       lg: '1024px',
-      xl: '2000px',
+      xl: '1400px',
     },
     colors: {
       transparent: 'transparent',
@@ -274,6 +274,9 @@ module.exports = {
         '"Courier New"',
         'monospace',
       ],
+      MRregular: ['Manrope Regular'],
+      MRbold: ['Manrope Bold'],
+      MRextrabold: ['Manrope Extrabold'],
     },
     fontSize: {
       xs: '0.75rem',
@@ -354,6 +357,7 @@ module.exports = {
     minHeight: {
       '0': '0',
       full: '100%',
+      '75': '75vh',
       screen: '100vh',
     },
     minWidth: {
@@ -507,7 +511,12 @@ module.exports = {
     width: ['responsive'],
     wordBreak: ['responsive'],
     zIndex: ['responsive'],
+    mixBlendMode: ['responsive'],
+    backgroundBlendMode: ['responsive'],
+    isolation: ['responsive'],
   },
   corePlugins: {},
-  plugins: [],
+  plugins: [
+      require('tailwindcss-blend-mode'), // no options to configure
+  ],
 }
