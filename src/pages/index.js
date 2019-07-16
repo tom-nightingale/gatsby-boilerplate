@@ -1,6 +1,9 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
 import TemplateWrapper from "../components/TemplateWrapper"
+import Navigation from "../components/Navigation"
+
 import Img from "gatsby-image"
 import { IoIosMailUnread } from "react-icons/io";
 import LeagueLogoText from "../svg/league-logo-text.svg";
@@ -18,25 +21,31 @@ const IndexPage = props => {
 
                     <div style={{
                         backgroundImage: "url(" + LeagueBgImage + ")"
-                    }} className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-500 text-beige-100">
+                    }} className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
 
-                        <LeagueLogoText className="w-32 mb-8"/>
+                        <Link to="/">
+                            <LeagueLogoText className="w-32 mb-8"/>
+                        </Link>
 
                         <div>
 
                             <h1 className="font-bold text-3xl mb-5 font-MRextrabold sm:text-5xl md:text-3xl xl:text-5xl">We are <span className="text-teal-500">League</span>.</h1>
 
-                            <p className="font-MRbold leading-relaxed max-w-md lg:max-w-lg sm:text-lg md:text-base xl:text-lg">We pair beautifully designed websites with brilliant online marketing to help your business grow.</p>
+                            <p className="font-MRbold leading-loose max-w-md lg:max-w-md sm:text-lg md:text-base xl:text-xl">We pair beautifully designed websites with brilliant online marketing to help your business grow.</p>
 
                         </div>
 
-                        <p className="flex flex-wrap align-bottom"><IoIosMailUnread className="text-white text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></p>
+                        <Link to="/" className="flex flex-wrap align-bottom"><IoIosMailUnread className="text-white text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></Link>
 
                     </div>
 
-                    <div className="w-full md:w-1/2 lg:w-3/5 md:p-8 lg:pl-16 lg:pt-16 md:pb-0 lg:min-h-screen">
+                    <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
 
-                        <Img alt="something" title="something" fluid={props.data.heroImage.childImageSharp.fluid} />
+                        <Navigation />
+
+                        <div class="min-h-screen bg-gray-200">
+                            <Img alt="League Digital | Digital Marketing" title="League Digital | Digital Marketing" fluid={props.data.heroImage.childImageSharp.fluid} />
+                        </div>
 
                     </div>
 
