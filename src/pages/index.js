@@ -23,8 +23,8 @@ const IndexPage = props => {
                         backgroundImage: "url(" + LeagueBgImage + ")"
                     }} className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
 
-                        <Link to="/">
-                            <LeagueLogoText className="w-32 mb-8"/>
+                        <Link to="/" className="w-32 mb-8">
+                            <LeagueLogoText />
                         </Link>
 
                         <div>
@@ -43,7 +43,7 @@ const IndexPage = props => {
 
                         <Navigation />
 
-                        <div class="min-h-screen bg-gray-200">
+                        <div className="min-h-screen bg-gray-200">
                             <Img alt="League Digital | Digital Marketing" title="League Digital | Digital Marketing" fluid={props.data.heroImage.childImageSharp.fluid} />
                         </div>
 
