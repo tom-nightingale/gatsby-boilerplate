@@ -2,7 +2,6 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import "../styles/global.css"
 
-import Header from "./Header"
 import useSiteMetadata from './SiteMeta'
 
 const TemplateWrapper = ({ children }) => {
@@ -45,7 +44,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content={siteURL} />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Header />
+
       {children}
       </div>
   )
