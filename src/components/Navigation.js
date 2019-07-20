@@ -9,10 +9,6 @@ import { IoIosMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import { IoIosMailUnread } from "react-icons/io";
 
-
-
-
-
 const Navigation = class extends React.Component {
     constructor(props) {
       super(props);
@@ -45,17 +41,15 @@ const Navigation = class extends React.Component {
 
     render() {
 
-        const subItems = {
-            "web design" : "/",
-            "web development" : "/",
-            "seo" : "/",
-            "ppc" : "/",
-            "content marketing" : "/",
-            "copywriting" : "/",
-            "telecoms" : "/"
-        }
-
-        console.log(subItems);
+      const subItems = {
+          "web design" : "/",
+          "web development" : "/",
+          "seo" : "/",
+          "ppc" : "/",
+          "content marketing" : "/",
+          "copywriting" : "/",
+          "telecoms" : "/"
+      }
 
       return (
           <div className="min-w-full flex flex-wrap justify-end py-12 md:py-16 xl:py-12">
@@ -65,17 +59,18 @@ const Navigation = class extends React.Component {
                   <Link>our services</Link>
                   <Link>about us</Link>
                   <Link>work with us</Link>
-                  <a href="#" onClick={() => this.toggleHamburger() }>
-                      <IoIosMenu className="text-4xl antialiased subpixel-antialiased" />
+
+                  <a className="absolute md:relative z-10 inline-block top-0 right-0 mt-12 mr-8 md:mt-0 md:mr-0 p-1 md:p-0" href="#" onClick={() => this.toggleHamburger() }>
+                      <IoIosMenu className="text-beige-100 md:text-navy-500 text-4xl" />
                   </a>
 
               </nav>
 
 
 
-              <div className={`w-1/4 bg-white absolute top-0 right-0 p-10 pt-16 min-h-screen z-10 ${this.state.navBarActiveClass}`}>
+              <div className={`w-full lg:w-1/4 bg-white absolute top-0 right-0 p-5 pt-6 lg:p-10 lg:pt-16 min-h-screen z-10 ${this.state.navBarActiveClass}`}>
 
-                  <a className="absolute top-0 right-0 p-10 mt-2 pt-12 text-4xl text-navy-500" href="#" onClick={() => this.toggleHamburger()}><IoMdClose /></a>
+                  <a className="absolute top-0 right-0 mt-12 mr-8 p-1 md:mt-6 md:mr-6 lg:mt-2 lg:mr-8 lg:pt-12 text-4xl text-navy-500" href="#" onClick={() => this.toggleHamburger()}><IoMdClose /></a>
 
                   <nav className="flex flex-col justify-center pl-10 text-navy-500 font-MRextrabold ">
                       <Link to="/"><LeagueLogoText className="mt-4 mb-8 w-32 mb-8" /></Link>

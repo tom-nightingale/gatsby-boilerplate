@@ -3,25 +3,30 @@ import { Link, graphql } from "gatsby"
 
 import TemplateWrapper from "../components/TemplateWrapper"
 import Navigation from "../components/Navigation"
+import Bucket from "../components/Bucket"
 
 import Img from "gatsby-image"
 import { IoIosMailUnread } from "react-icons/io";
 import LeagueLogoText from "../svg/league-logo-text.svg";
 import LeagueBgImage from "../img/league-bg.jpg";
+import HeroImg from "../img/hero-bg.jpg";
 
-console.log(LeagueBgImage);
 
-const IndexPage = props => {
-    return(
+const IndexPage = (props) => {
+
+    return (
+
         <TemplateWrapper>
 
             <div>
 
                 <div className="container max-w-full md:flex md:flex-wrap md:items-start mx-auto">
 
-                    <div style={{
+                    <div
+                    style={{
                         backgroundImage: "url(" + LeagueBgImage + ")"
-                    }} className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
+                    }}
+                    className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
 
                         <Link to="/" className="w-32 mb-8">
                             <LeagueLogoText />
@@ -43,8 +48,11 @@ const IndexPage = props => {
 
                         <Navigation />
 
-                        <div className="min-h-screen bg-gray-200">
-                            <Img alt="League Digital | Digital Marketing" title="League Digital | Digital Marketing" fluid={props.data.heroImage.childImageSharp.fluid} />
+                        <div
+                        style={{
+                            backgroundImage: "url(" + HeroImg + ")"
+                        }}
+                        className="min-h-screen bg-gray-200 bg-center bg-cover">
                         </div>
 
                     </div>
@@ -60,7 +68,7 @@ const IndexPage = props => {
 
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eget libero quis volutpat. Nunc ac ornare sem. Ut placerat vitae ex ut rhoncus.</p>
 
-                        <a href="">See all projects</a>
+                        <Link to="/">See all projects</Link>
 
                     </div>
 
@@ -75,7 +83,7 @@ const IndexPage = props => {
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestiae quidem dolore qui a optio earum maxime magni eius, quas, explicabo ea quo? Minima, veniam. Blanditiis soluta numquam, ullam sequi?</p>
 
-                            <a href="">See more projects</a>
+                            <Link to="/">See more projects</Link>
                         </div>
 
                     </div>
@@ -107,31 +115,12 @@ const IndexPage = props => {
 
                 <div className="container max-w-full flex flex-wrap">
 
-                    <a className="md:w-2/6">
-                        <Img alt="something" title="something" fluid={props.data.heroImage.childImageSharp.fluid} />
-                        <div>
-                            <h2>Strategy</h2>
-                            <p>How we start every project</p>
-                        </div>
-                    </a>
-
-                    <a className="md:w-2/6">
-                        <Img alt="something" title="something" fluid={props.data.heroImage.childImageSharp.fluid} />
-                        <div>
-                            <h2>Development</h2>
-                            <p>How we start every project</p>
-                        </div>
-                    </a>
-
-                    <a className="md:w-2/6">
-                        <Img alt="something" title="something" fluid={props.data.heroImage.childImageSharp.fluid} />
-                        <div>
-                            <h2>Results</h2>
-                            <p>How we start every project</p>
-                        </div>
-                    </a>
+                    <Bucket heading="Strategy" intro="How we start every project" img={props.data.heroImage} alt="" />
+                    <Bucket heading="Developent" intro="Built with the latest standards" img={props.data.heroImage} alt="" />
+                    <Bucket heading="Results" intro="Continual analysis to achieve your goals" img={props.data.heroImage} alt=""/>
 
                 </div>
+
 
             </div>
 
