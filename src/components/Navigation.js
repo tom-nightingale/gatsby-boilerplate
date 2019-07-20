@@ -52,21 +52,19 @@ const Navigation = class extends React.Component {
       }
 
       return (
-          <div className="min-w-full flex flex-wrap justify-end py-12 md:py-16 xl:py-12">
+          <div className="min-w-full flex flex-wrap justify-end">
 
-              <nav className="flex flex-wrap justify-around items-center py-2 px-4 w-full lg:w-3/4 xl:w-1/2 bg-white font-MRextrabold">
+              <nav className="md:flex flex-wrap justify-around items-center md:py-16 lg:py-12 xl:py-16 px-4 w-full lg:w-3/4 xl:w-1/2 bg-white font-MRextrabold">
 
-                  <Link>our services</Link>
-                  <Link>about us</Link>
-                  <Link>work with us</Link>
+                  <Link className="hidden md:inline-block">our services</Link>
+                  <Link className="hidden md:inline-block">about us</Link>
+                  <Link className="hidden md:inline-block">work with us</Link>
 
                   <a className="absolute md:relative z-10 inline-block top-0 right-0 mt-12 mr-8 md:mt-0 md:mr-0 p-1 md:p-0" href="#" onClick={() => this.toggleHamburger() }>
                       <IoIosMenu className="text-beige-100 md:text-navy-500 text-4xl" />
                   </a>
 
               </nav>
-
-
 
               <div className={`w-full lg:w-1/4 bg-white absolute top-0 right-0 p-5 pt-6 lg:p-10 lg:pt-16 min-h-screen z-10 ${this.state.navBarActiveClass}`}>
 
