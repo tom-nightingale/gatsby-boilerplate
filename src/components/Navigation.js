@@ -4,10 +4,8 @@ import { Link } from "gatsby";
 import LeagueLogoText from "../svg/league-logo-text.svg";
 import LeagueBgImage from "../img/league-bg.jpg";
 
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosMenu } from "react-icons/io";
-import { IoMdClose } from "react-icons/io";
-import { IoIosMailUnread } from "react-icons/io";
+import { IoIosMenu, IoMdClose, IoIosMailUnread } from "react-icons/io";
+
 
 const Navigation = class extends React.Component {
     constructor(props) {

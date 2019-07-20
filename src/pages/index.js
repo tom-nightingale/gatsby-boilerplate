@@ -6,7 +6,8 @@ import Navigation from "../components/Navigation"
 import Bucket from "../components/Bucket"
 
 import Img from "gatsby-image"
-import { IoIosMailUnread } from "react-icons/io";
+import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
+
 import LeagueLogoText from "../svg/league-logo-text.svg";
 import LeagueBgImage from "../img/league-bg.jpg";
 import HeroImg from "../img/hero-bg.jpg";
@@ -96,19 +97,22 @@ const IndexPage = (props) => {
 
                 <div className="container max-w-full flex flex-wrap my-4 px-6 lg:my-16">
 
-                    <div className="mb-6 md:px-4 lg:px-12 md:w-1/3">
+                    <div className="mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
+                        <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoIosCode /></span>
                         <h2 className="font-MRextrabold text-xl md:text-2xl text-teal-800 mb-2">Plan</h2>
                         <p className="font-MRbold mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tenetur, temporibus!</p>
                         <p>Totam nostrum sit dolore vel aliquid quas, qui aperiam illum in. Pariatur deleniti odit consectetur illo consequatur laudantium autem?</p>
                     </div>
 
-                    <div className="mb-6 md:px-4 lg:px-12 md:w-1/3">
+                    <div className="mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
+                        <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoMdMegaphone /></span>
                         <h2 className="font-MRextrabold text-xl md:text-2xl text-teal-800 mb-2">Develop</h2>
                         <p className="font-MRbold mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tenetur, temporibus!</p>
                         <p>Totam nostrum sit dolore vel aliquid quas, qui aperiam illum in. Pariatur deleniti odit consectetur illo consequatur laudantium autem?</p>
                     </div>
 
-                    <div className="mb-6 md:px-4 lg:px-12 md:w-1/3">
+                    <div className="flex-grow mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
+                        <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoMdSync /></span>
                         <h2 className="font-MRextrabold text-xl md:text-2xl text-teal-800 mb-2">Market</h2>
                         <p className="font-MRbold mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tenetur, temporibus!</p>
                         <p>Totam nostrum sit dolore vel aliquid quas, qui aperiam illum in. Pariatur deleniti odit consectetur illo consequatur laudantium autem?</p>
@@ -157,6 +161,41 @@ const IndexPage = (props) => {
                     </form>
 
                 </div>
+
+
+                <footer className="bg-navy-500 p-8  text-beige-100 text-center md:text-left md:flex md:flex-wrap">
+
+                    <div className="p-10 md:w-1/2 lg:w-full xl:w-1/4 md:flex md:items-center md:justify-center">
+
+                        <Link to="/" className="block">
+                            <LeagueLogoText className="w-32 mx-auto" />
+                        </Link>
+
+                    </div>
+
+                    <div className="p-10 md:w-1/2 lg:w-1/3 xl:w-1/4">
+
+                        <p><span className="block mb-3 font-MRbold">League is a creative agency in <span className="text-teal-500">Nottingham</span>.</span> We help businesses of all sizes achieve their online marketing goals. We're here to help you grow. It's what we do.</p>
+
+                    </div>
+
+                    <div className="p-10 md:w-1/2 lg:w-1/3 xl:w-1/4">
+
+                        <h3 className="mb-3 font-MRextrabold">General Enquiries</h3>
+
+                        <a href="mailto:hello@weareleague.co.uk" className="flex flex-wrap items-center justify-center md:justify-start"><IoIosMailUnread className="inline-block text-xl mr-2" /> hello@weareleague.co.uk</a>
+
+                    </div>
+
+                    <div className="p-10 md:w-1/2 lg:w-1/3 xl:w-1/4">
+
+                        <h3 className="mb-3 font-MRextrabold">Social</h3>
+
+
+
+                    </div>
+
+                </footer>
 
 
             </div>
