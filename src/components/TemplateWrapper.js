@@ -4,6 +4,8 @@ import "../styles/global.css"
 
 import useSiteMetadata from './SiteMeta'
 
+import Footer from './Footer'
+
 const TemplateWrapper = ({ children }) => {
   // set the title and description from the meta data
   const { title, description, siteURL } = useSiteMetadata()
@@ -44,8 +46,8 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content={siteURL} />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-
       {children}
+      <Footer />
       </div>
   )
 }
