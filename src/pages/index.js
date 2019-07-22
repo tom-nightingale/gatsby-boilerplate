@@ -5,6 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 import TemplateWrapper from "../components/TemplateWrapper"
 import Navigation from "../components/Navigation"
 import Bucket from "../components/Bucket"
+import Footer from "../components/Footer"
 
 import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 
@@ -163,39 +164,7 @@ const IndexPage = (props) => {
                 </div>
 
 
-                <footer className="bg-navy-500 p-8  text-beige-100 text-center md:text-left md:flex md:flex-wrap">
-
-                    <div className="p-10 md:w-1/2 lg:w-full xl:w-1/4 md:flex md:items-center md:justify-center">
-
-                        <Link to="/" className="block">
-                            <LeagueLogoText className="w-32 mx-auto" />
-                        </Link>
-
-                    </div>
-
-                    <div className="p-10 md:w-1/2 lg:w-1/3 xl:w-1/4">
-
-                        <p><span className="block mb-3 font-MRbold">League is a creative agency in <span className="text-teal-500">Nottingham</span>.</span> We help businesses of all sizes achieve their online marketing goals. We're here to help you grow. It's what we do.</p>
-
-                    </div>
-
-                    <div className="p-10 md:w-1/2 lg:w-1/3 xl:w-1/4">
-
-                        <h3 className="mb-3 font-MRextrabold">General Enquiries</h3>
-
-                        <a href="mailto:hello@weareleague.co.uk" className="flex flex-wrap items-center justify-center md:justify-start"><IoIosMailUnread className="inline-block text-xl mr-2" /> hello@weareleague.co.uk</a>
-
-                    </div>
-
-                    <div className="p-10 md:w-1/2 lg:w-1/3 xl:w-1/4">
-
-                        <h3 className="mb-3 font-MRextrabold">Social</h3>
-
-
-
-                    </div>
-
-                </footer>
+                <Footer />
 
 
             </div>
