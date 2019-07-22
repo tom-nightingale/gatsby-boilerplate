@@ -1,10 +1,13 @@
 import React from "react"
-import { Link } from "gatsby";
+import { Link } from "gatsby"
 
-import LeagueLogoText from "../svg/league-logo-text.svg";
-import LeagueBgImage from "../img/league-bg.jpg";
+import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import { IoIosMenu, IoMdClose, IoIosMailUnread } from "react-icons/io";
+import LeagueLogoText from "../svg/league-logo-text.svg"
+import LeagueBgImage from "../img/league-bg.jpg"
+
+import { IoIosMenu, IoMdClose, IoIosMailUnread } from "react-icons/io"
 
 
 const Navigation = class extends React.Component {
@@ -52,6 +55,10 @@ const Navigation = class extends React.Component {
       return (
           <div className="min-w-full flex flex-wrap justify-end">
 
+          <AniLink fade to="/projects">
+  Projects
+</AniLink>
+
               <nav className="md:flex flex-wrap justify-around items-center md:py-16 lg:py-12 xl:py-16 px-4 w-full lg:w-3/4 xl:w-1/2 bg-white font-MRextrabold">
 
                   <Link to="/" className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">our services</Link>
@@ -77,6 +84,7 @@ const Navigation = class extends React.Component {
                           ))
                       */}
                       <Link to="/projects" className="py-3">projects</Link>
+
                       <Link to="/" className="py-3">latest news</Link>
                       <Link to="/" className="flex flex-wrap items-center py-3"><IoIosMailUnread className="text-2xl mr-2"/> work with us</Link>
                   </nav>

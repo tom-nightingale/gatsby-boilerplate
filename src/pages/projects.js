@@ -4,6 +4,9 @@ import { Link, graphql } from "gatsby"
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
+import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import TemplateWrapper from "../components/TemplateWrapper"
 import Navigation from "../components/Navigation"
 
@@ -33,7 +36,7 @@ const IndexPage = (props) => {
 
                     </div>
 
-                    <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16">
+                    <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 overflow-y-visible">
 
                         <Navigation />
 
@@ -63,21 +66,6 @@ const IndexPage = (props) => {
                                 <h2 className="text-teal-500">title</h2>
                                 <p>qLorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis veritatis obcaecati doloribus labore neque, repellendus est, explicabo deleniti, tempora, nam assumenda sint aperiam! Qui cum dolores labore nihil est!</p>
                             </div>
-                            
-                        </div>
-
-                    </Link>
-
-                    <Link to="/" className="w-100 sm:w-1/2 lg:w-1/3 p-4 bg-beige-100">
-
-                        <div className="relative group overflow-hidden w-100 bg-white">
-
-                            <div className="transition-all transition-250">
-                                <h2 className="text-teal-500">title</h2>
-                                <p>qLorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis veritatis obcaecati doloribus labore neque, repellendus est, explicabo deleniti, tempora, nam assumenda sint aperiam! Qui cum dolores labore nihil est!</p>
-                            </div>
-
-
 
                         </div>
 
@@ -98,12 +86,20 @@ const IndexPage = (props) => {
 
                     </Link>
 
+                    <Link to="/" className="w-100 sm:w-1/2 lg:w-1/3 p-4 bg-beige-100">
+
+                        <div className="relative group overflow-hidden w-100 bg-white">
+
+                            <div className="transition-all transition-250">
+                                <h2 className="text-teal-500">title</h2>
+                                <p>qLorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis veritatis obcaecati doloribus labore neque, repellendus est, explicabo deleniti, tempora, nam assumenda sint aperiam! Qui cum dolores labore nihil est!</p>
+                            </div>
 
 
 
+                        </div>
 
-
-
+                    </Link>
 
                 </div>
 
