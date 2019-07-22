@@ -26,7 +26,7 @@ const IndexPage = (props) => {
 
             <div>
 
-                <div className="container max-w-full md:flex md:flex-wrap md:items-start mx-auto">
+                <div className="relative container max-w-full md:flex md:flex-wrap md:items-start mx-auto overflow-hidden">
 
                     <BackgroundImage
                         fluid={props.data.leagueBg.childImageSharp.fluid}
@@ -81,8 +81,9 @@ const IndexPage = (props) => {
                     <div className="flex flex-wrap w-full lg:w-2/3 lg:pl-5">
 
                         <BackgroundImage
-                            className="bg-cover bg-center py-40 w-full md:w-1/2 md:py-0"
-                            fluid={props.data.eslandCare.childImageSharp.fluid} >
+                            className="bg-cover bg-center py-40 w-full md:w-1/2 md:py-0 bg-beige-100"
+                            fluid={props.data.eslandCare.childImageSharp.fluid}
+                            classId="a-unique-class">
                         </BackgroundImage>
 
                         <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">
