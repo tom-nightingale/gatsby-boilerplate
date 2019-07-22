@@ -1,11 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"
 import Navigation from "../components/Navigation"
 import Bucket from "../components/Bucket"
 
-import Img from "gatsby-image"
 import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 
 import LeagueLogoText from "../svg/league-logo-text.svg";
@@ -25,11 +25,11 @@ const IndexPage = (props) => {
 
                 <div className="container max-w-full md:flex md:flex-wrap md:items-start mx-auto">
 
-                    <div
-                    style={{
-                        backgroundImage: "url(" + LeagueBgImage + ")"
-                    }}
-                    className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
+                    <BackgroundImage
+                        fluid={props.data.leagueBg.childImageSharp.fluid}
+                        className="gatsby-background-image-SOMETHING bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:p-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
+                        classId="something"
+                      >
 
                         <Link to="/" className="w-32 mb-8">
                             <LeagueLogoText />
@@ -45,7 +45,7 @@ const IndexPage = (props) => {
 
                         <Link to="/" className="flex flex-wrap align-bottom"><IoIosMailUnread className="text-white text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></Link>
 
-                    </div>
+                    </BackgroundImage>
 
                     <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
 
@@ -77,12 +77,10 @@ const IndexPage = (props) => {
 
                     <div className="flex flex-wrap w-full lg:w-2/3 lg:pl-5">
 
-                        <div
-                            style={{
-                                backgroundImage: "url(" + LeagueBgImage + ")"
-                            }}
-                            className="bg-cover bg-center py-40 w-full md:w-1/2 md:py-0 ">
-                        </div>
+                        <BackgroundImage
+                            className="bg-cover bg-center py-40 w-full md:w-1/2 md:py-0"
+                            fluid={props.data.heroBg.childImageSharp.fluid} >
+                        </BackgroundImage>
 
                         <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">
 
@@ -125,9 +123,9 @@ const IndexPage = (props) => {
 
                 <div className="container max-w-full flex flex-wrap my-4 lg:my-16 px-4 md:px-0">
 
-                    <Bucket heading="Strategy" intro="How we start every project" img={props.data.heroImage} alt="" />
-                    <Bucket heading="Development" intro="Built with the latest standards" img={props.data.heroImage} alt="" />
-                    <Bucket heading="Results" intro="Continual analysis to achieve your goals" img={props.data.heroImage} alt=""/>
+                    <Bucket heading="Strategy" intro="How we start every project" img={props.data.heroBg} alt="" />
+                    <Bucket heading="Development" intro="Built with the latest standards" img={props.data.heroBg} alt="" />
+                    <Bucket heading="Results" intro="Continual analysis to achieve your goals" img={props.data.heroBg} alt=""/>
 
                 </div>
 
@@ -210,7 +208,14 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query {
-    heroImage: file(relativePath: { eq: "hero-bg.jpg" }) {
+    heroBg: file(relativePath: { eq: "hero-bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    leagueBg: file(relativePath: { eq: "league-bg.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
