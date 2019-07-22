@@ -1,5 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
+import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"
@@ -44,7 +46,7 @@ const IndexPage = (props) => {
 
                         </div>
 
-                        <Link to="/" className="flex flex-wrap align-bottom"><IoIosMailUnread className="text-white text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></Link>
+                        <Link to="/" className="flex flex-wrap align-bottom hover:text-teal-500 transition-all transition-250"><IoIosMailUnread className="text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></Link>
 
                     </BackgroundImage>
 
@@ -72,7 +74,7 @@ const IndexPage = (props) => {
 
                         <p className="lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eget libero quis volutpat. Nunc ac ornare sem. Ut placerat vitae ex ut rhoncus.</p>
 
-                        <Link className="inline-block mt-4 mb-4 btn text-teal-500 text-lg font-MRextrabold" to="/">See all projects</Link>
+                        <Link className="inline-block mt-4 mb-4 btn text-teal-500 text-lg font-MRextrabold link-underline link-teal" to="/">See all projects</Link>
 
                     </div>
 
@@ -80,7 +82,7 @@ const IndexPage = (props) => {
 
                         <BackgroundImage
                             className="bg-cover bg-center py-40 w-full md:w-1/2 md:py-0"
-                            fluid={props.data.heroBg.childImageSharp.fluid} >
+                            fluid={props.data.eslandCare.childImageSharp.fluid} >
                         </BackgroundImage>
 
                         <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">
@@ -89,7 +91,7 @@ const IndexPage = (props) => {
 
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestiae quidem dolore qui a optio earum maxime magni eius, quas, explicabo ea quo? Minima, veniam. Blanditiis soluta numquam, ullam sequi?</p>
 
-                            <Link className="inline-block mt-4 mb-4 btn text-beige-100 text-lg font-MRextrabold" to="/">See more projects</Link>
+                            <Link className="inline-block mt-4 mb-4 btn text-beige-100 text-lg font-MRextrabold link-underline link-beige" to="/">See more projects</Link>
                         </div>
 
                     </div>
@@ -178,6 +180,13 @@ export default IndexPage;
 export const pageQuery = graphql`
   query {
     heroBg: file(relativePath: { eq: "hero-bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    eslandCare: file(relativePath: { eq: "esland-care.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid

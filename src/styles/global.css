@@ -32,3 +32,56 @@ body {
 .bg-multiply {
     background-blend-mode: multiply;
 }
+
+.link-underline {
+    position: relative;
+    transition: .25s;
+
+    &:after {
+        content: '';
+        @apply absolute;
+        bottom: -10px;
+        left: 0;
+        width: 20%;
+        height: 4px;
+    }
+
+    &:hover {
+        &:after {
+            transition: .25s;
+            width: 30%;
+        }
+    }
+}
+
+.link-teal {
+    @apply text-teal-500;
+
+    &:after {
+        @apply bg-teal-500;
+    }
+
+    &:hover {
+        @apply text-teal-300;
+
+        &:after {
+            @apply bg-teal-300;
+        }
+    }
+}
+
+.link-beige {
+    @apply text-beige-100;
+
+    &:after {
+        @apply bg-beige-100;
+    }
+
+    &:hover {
+        @apply text-beige-300;
+
+        &:after {
+            @apply bg-beige-300;
+        }
+    }
+}
