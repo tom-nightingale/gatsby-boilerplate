@@ -52,8 +52,6 @@ const IndexPage = (props) => {
                                 <p>qLorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis veritatis obcaecati doloribus labore neque, repellendus est, explicabo deleniti, tempora, nam assumenda sint aperiam! Qui cum dolores labore nihil est!</p>
                             </div>
 
-
-
                         </div>
 
                     </Link>
@@ -65,9 +63,7 @@ const IndexPage = (props) => {
                                 <h2 className="text-teal-500">title</h2>
                                 <p>qLorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam facilis veritatis obcaecati doloribus labore neque, repellendus est, explicabo deleniti, tempora, nam assumenda sint aperiam! Qui cum dolores labore nihil est!</p>
                             </div>
-
-
-
+                            
                         </div>
 
                     </Link>
