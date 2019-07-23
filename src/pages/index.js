@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+
 import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -34,9 +36,14 @@ const IndexPage = (props) => {
                         classId="hero-image"
                       >
 
-                        <Link to="/" className="w-32 mb-8">
+                        <AniLink
+                            to="/"
+                            className="w-32 mb-8"
+                            paintDrip
+                            duration={.75}
+                            hex="#0b1529">
                             <LeagueLogoText className="inline-block"/>
-                        </Link>
+                        </AniLink>
 
                         <div>
 
@@ -46,7 +53,12 @@ const IndexPage = (props) => {
 
                         </div>
 
-                        <Link to="/" className="flex flex-wrap align-bottom hover:text-teal-500 transition-all transition-250"><IoIosMailUnread className="text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></Link>
+                        <AniLink
+                            paintDrip
+                            duration={.75}
+                            hex="#0b1529"
+                            to="/"
+                            className="flex flex-wrap align-bottom hover:text-teal-500 transition-all transition-250"><IoIosMailUnread className="text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></AniLink>
 
                     </BackgroundImage>
 

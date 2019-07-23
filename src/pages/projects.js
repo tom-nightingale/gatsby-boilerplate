@@ -30,9 +30,14 @@ const IndexPage = (props) => {
 
                     <div className="md:w-1/2 lg:w-2/12 p-10 py-16 md:p-16 lg:pl-20 flex flex-wrap flex-col bg-navy-600 text-beige-100">
 
-                        <Link to="/" className="w-32">
+                        <AniLink
+                            paintDrip
+                            duration={.75}
+                            hex="#0b1529"
+                            to="/"
+                            className="w-32">
                             <LeagueLogoText className="inline-block" />
-                        </Link>
+                        </AniLink>
 
                     </div>
 

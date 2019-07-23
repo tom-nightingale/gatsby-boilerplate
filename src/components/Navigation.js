@@ -1,7 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import LeagueLogoText from "../svg/league-logo-text.svg"
@@ -55,15 +53,28 @@ const Navigation = class extends React.Component {
       return (
           <div className="min-w-full flex flex-wrap justify-end">
 
-          <AniLink fade to="/projects">
-  Projects
-</AniLink>
-
               <nav className="md:flex flex-wrap justify-around items-center md:py-16 lg:py-12 xl:py-16 px-4 w-full lg:w-3/4 xl:w-1/2 bg-white font-MRextrabold">
 
-                  <Link to="/" className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">our services</Link>
-                  <Link to="/projects" className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">projects</Link>
-                  <Link to="/" className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">work with us</Link>
+              <AniLink
+                  to="/"
+                  paintDrip
+                  duration={.75}
+                  hex="#0b1529"
+                  className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">our services</AniLink>
+
+              <AniLink
+                  to="/projects"
+                  paintDrip
+                  duration={.75}
+                  hex="#0b1529"
+                  className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">projects</AniLink>
+
+              <AniLink
+                  to="/"
+                  paintDrip
+                  duration={.75}
+                  hex="#0b1529"
+                  className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">work with us</AniLink>
 
                   <a className="absolute md:relative z-10 inline-block top-0 right-0 mt-12 mr-8 md:mt-0 md:mr-0 p-1 md:p-0" href="/" onClick={(e) => this.toggleHamburger(e) }>
                       <IoIosMenu className="text-beige-100 md:text-navy-500 text-4xl" />
@@ -76,17 +87,47 @@ const Navigation = class extends React.Component {
                   <a className="absolute top-0 right-0 mt-12 mr-8 p-1 md:mt-6 md:mr-6 lg:mt-2 lg:mr-8 lg:pt-12 text-4xl text-navy-500" href="/" onClick={(e) => this.toggleHamburger(e)}><IoMdClose /></a>
 
                   <nav className="flex flex-col justify-center pl-10 text-navy-500 font-MRextrabold ">
-                      <Link to="/"><LeagueLogoText className="mt-4 mb-8 w-32 mb-8" /></Link>
-                      <Link to="/" className="py-3">our services</Link>
+
+                      <AniLink
+                          paintDrip
+                          duration={.75}
+                          hex="#0b1529"
+                          to="/"><LeagueLogoText
+                          className="mt-4 mb-8 w-32 mb-8" /></AniLink>
+
+                      <AniLink
+                          paintDrip
+                          duration={.75}
+                          hex="#0b1529"
+                          to="/"
+                          className="py-3">our services</AniLink>
+
                       {/*
                           Object.entries(subItems).map(([name, url]) => (
                               <Link to={url} className="py-3 pl-4 text-teal-500">{name}</Link>
                           ))
                       */}
-                      <Link to="/projects" className="py-3">projects</Link>
 
-                      <Link to="/" className="py-3">latest news</Link>
-                      <Link to="/" className="flex flex-wrap items-center py-3"><IoIosMailUnread className="text-2xl mr-2"/> work with us</Link>
+                      <AniLink
+                          paintDrip
+                          duration={.75}
+                          hex="#0b1529"
+                          to="/projects"
+                          className="py-3">projects</AniLink>
+
+                      <AniLink
+                          paintDrip
+                          duration={.75}
+                          hex="#0b1529"
+                          to="/"
+                          className="py-3">latest news</AniLink>
+
+                      <AniLink
+                          to="/"
+                          paintDrip
+                          duration={.75}
+                          hex="#0b1529"
+                          className="flex flex-wrap items-center py-3"><IoIosMailUnread className="text-2xl mr-2"/> work with us</AniLink>
                   </nav>
 
               </div>
