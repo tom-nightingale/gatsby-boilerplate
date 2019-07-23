@@ -32,8 +32,7 @@ const IndexPage = (props) => {
 
                     <BackgroundImage
                         fluid={props.data.leagueBg.childImageSharp.fluid}
-                        className="bg-multiply bg-cover bg-center md:w-1/2 lg:w-2/5 min-h-screen p-10 py-16 md:p-16 lg:pl-20 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
-                        classId="hero-image"
+                        className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-16 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
                       >
 
                         <AniLink
@@ -66,12 +65,10 @@ const IndexPage = (props) => {
 
                         <Navigation />
 
-                        <div
-                        style={{
-                            backgroundImage: "url(" + HeroImg + ")"
-                        }}
-                        className="min-h-50 md:min-h-screen bg-gray-200 bg-center bg-cover">
-                        </div>
+                        <BackgroundImage
+                            fluid={props.data.leagueBg.childImageSharp.fluid}
+                            className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover">
+                        </BackgroundImage>
 
                     </div>
 
@@ -93,9 +90,9 @@ const IndexPage = (props) => {
                     <div className="flex flex-wrap w-full lg:w-2/3 lg:pl-5">
 
                         <BackgroundImage
-                            className="bg-cover bg-center py-40 w-full md:w-1/2 md:py-0 bg-beige-100"
+                            className="home-project-image bg-cover bg-center py-40 w-full bg-beige-100"
                             fluid={props.data.eslandCare.childImageSharp.fluid}
-                            classId="a-unique-class">
+                            >
                         </BackgroundImage>
 
                         <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">

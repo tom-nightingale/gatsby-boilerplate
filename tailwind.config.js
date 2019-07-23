@@ -171,6 +171,8 @@ module.exports = {
       '48': '12rem',
       '56': '14rem',
       '64': '16rem',
+      '96': '24rem',
+      '128': '32rem',
     },
     backgroundColor: theme => theme('colors'),
     backgroundPosition: {
@@ -354,14 +356,15 @@ module.exports = {
       '6xl': '72rem',
       full: '2000px',
     },
-    minHeight: {
+    minHeight: theme => ({
+        ...theme('spacing'),
       '0': '0',
       full: '100%',
       '25': '25vh',
       '50': '50vh',
       '75': '75vh',
       screen: '100vh',
-    },
+    }),
     minWidth: {
       '0': '0',
       full: '100%',

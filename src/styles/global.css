@@ -85,3 +85,30 @@ body {
         }
     }
 }
+
+@screen md {
+    .home-league-image {
+        @apply w-1/2;
+        @apply p-16;
+    }
+
+    .home-hero-image {
+        @apply min-h-screen;
+    }
+
+    .home-project-image {
+        @apply w-1/2;
+        @apply py-0;
+    }
+
+    .home-bucket {
+        @apply w-2/6;
+    }
+}
+
+@screen lg {
+    .home-league-image {
+        @apply pl-20;
+        @apply w-2/5;
+    }
+}
