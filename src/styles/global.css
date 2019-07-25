@@ -1,6 +1,7 @@
 @font-face {
   font-family: "Manrope Regular";
   font-style: normal;
+  font-display:swap;
   src: url("../fonts/manrope-regular-webfont.woff2") format("woff2"),
        url("../fonts/manrope-regular-webfont.woff") format("woff");
 }
@@ -8,6 +9,7 @@
 @font-face {
   font-family: "Manrope Bold";
   font-style: normal;
+  font-display:swap;
   src: url("../fonts/manrope-bold-webfont.woff2") format("woff2"),
        url("../fonts/manrope-bold-webfont.woff") format("woff");
 }
@@ -15,6 +17,7 @@
 @font-face {
   font-family: "Manrope Extrabold";
   font-style: normal;
+  font-display:swap;
   font-weight: 400;
   src: url("../fonts/manrope-extrabold-webfont.woff2") format("woff2"),
        url("../fonts/manrope-extrabold-webfont.woff") format("woff");
