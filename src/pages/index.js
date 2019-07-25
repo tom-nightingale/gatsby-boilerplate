@@ -84,7 +84,7 @@ const IndexPage = (props) => {
 
                             <p className="lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eget libero quis volutpat. Nunc ac ornare sem. Ut placerat vitae ex ut rhoncus.</p>
 
-                            <Link className="inline-block mt-4 mb-4 btn text-teal-500 text-lg font-MRextrabold link-underline link-teal" to="/">See all projects</Link>
+                            <Link className="inline-block mt-4 mb-4 btn text-teal-500 text-lg font-MRextrabold link-underline link-teal" to="/projects">See all projects</Link>
 
                         </div>
 
@@ -102,7 +102,7 @@ const IndexPage = (props) => {
 
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestiae quidem dolore qui a optio earum maxime magni eius, quas, explicabo ea quo? Minima, veniam. Blanditiis soluta numquam, ullam sequi?</p>
 
-                                <Link className="inline-block mt-4 mb-4 btn text-beige-100 text-lg font-MRextrabold link-underline link-beige" to="/">See more projects</Link>
+                                <Link className="inline-block mt-4 mb-4 btn text-beige-100 text-lg font-MRextrabold link-underline link-beige" to="/projects">See more projects</Link>
                             </div>
 
                         </div>
