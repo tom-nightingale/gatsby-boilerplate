@@ -23,7 +23,7 @@ const ContactForm = () => {
 
                 <label className="block w-full lg:w-1/4 px-4 mb-8 lg:my-8" htmlFor="Email">
                     <span className="block w-full mb-2 font-MRbold">or email you at...</span>
-                    <input className="p-2 w-full border-b-4 border-teal-500 text-center text-teal-500" type="tel" name="Email" placeholder="hello@weareleague.co.uk" />
+                    <input className="p-2 w-full border-b-4 border-teal-500 text-center text-teal-500" type="email" name="Email" placeholder="hello@weareleague.co.uk" />
                 </label>
 
                 <label className="w-full lg:w-1/4 lg:my-8" htmlFor="Submit">
