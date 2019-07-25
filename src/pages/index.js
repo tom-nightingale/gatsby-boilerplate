@@ -14,8 +14,6 @@ import ContactForm from "../components/ContactForm.js"
 import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 
 import LeagueLogoText from "../svg/league-logo-text.svg";
-import LeagueBgImage from "../img/league-bg.jpg";
-import HeroImg from "../img/hero-bg.jpg";
 
 
 const IndexPage = (props) => {

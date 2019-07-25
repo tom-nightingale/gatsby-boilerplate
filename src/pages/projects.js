@@ -1,19 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
-import TransitionLink from 'gatsby-plugin-transition-link'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import TemplateWrapper from "../components/TemplateWrapper"
 import Navigation from "../components/Navigation"
 
-import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
-
 import LeagueLogoText from "../svg/league-logo-text.svg";
-import LeagueBgImage from "../img/league-bg.jpg";
 
 
 const ProjectsPage = (props) => {
