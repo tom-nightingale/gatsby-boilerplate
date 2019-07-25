@@ -95,16 +95,15 @@ const ProjectsPage = (props) => {
                         });
 
                         return (
-                            <AniLink
-                            key={project.title}
-                            paintDrip
-                            duration={.75}
-                            hex="#0b1529"
-                            to={project.url}
-                            className="w-full sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-4"
-                            >
+                            <div key={project.title} className="w-full sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-4">
 
-                                <div className="relative group overflow-hidden w-full bg-white min-h-64 lg:min-h-128 bg-gray-100">
+                                <AniLink
+                                    paintDrip
+                                    duration={.75}
+                                    hex="#0b1529"
+                                    to={project.url}
+                                    className="flex flex-wrap content-center justify-center relative group overflow-hidden w-full bg-white min-h-64 lg:min-h-128 bg-gray-100"
+                                >
 
                                     <div className="transition-all transition-250">
                                         <h2 className="text-teal-500">{project.title}</h2>
@@ -114,9 +113,9 @@ const ProjectsPage = (props) => {
                                         </ul>
                                     </div>
 
-                                </div>
+                                </AniLink>
 
-                            </AniLink>
+                            </div>
                         )
                     })
                 }
