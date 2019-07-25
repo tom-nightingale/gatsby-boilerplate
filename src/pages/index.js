@@ -28,7 +28,7 @@ const IndexPage = (props) => {
 
             <div>
 
-                <div className="relative container max-w-full md:flex md:flex-wrap md:items-start mx-auto overflow-hidden">
+                <div className="relative z-10 container max-w-full md:flex md:flex-wrap md:items-start mx-auto overflow-hidden">
 
                     <BackgroundImage
                         fluid={props.data.leagueBg.childImageSharp.fluid}
@@ -74,39 +74,45 @@ const IndexPage = (props) => {
 
                 </div>
 
+                <div className="relative recent-projects">
 
-                <div className="container max-w-full flex flex-wrap mx-auto p-6 lg:py-0 lg:justify-between lg:my-16">
+                    <div className="relative z-10 container max-w-full flex flex-wrap mx-auto p-6 lg:py-0 lg:justify-between lg:my-16">
 
-                    <div className="w-full my-5 lg:mb-0 lg:w-1/3 xl:p-10">
+                        <div className="w-full my-5 lg:mb-0 lg:w-1/3 xl:p-10">
 
-                        <h2 className="font-MRextrabold text-2xl lg:text-3xl lg:mb-4">Recent projects</h2>
+                            <h2 className="font-MRextrabold text-2xl lg:text-3xl lg:mb-4">Recent projects</h2>
 
-                        <p className="lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eget libero quis volutpat. Nunc ac ornare sem. Ut placerat vitae ex ut rhoncus.</p>
+                            <p className="lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eget libero quis volutpat. Nunc ac ornare sem. Ut placerat vitae ex ut rhoncus.</p>
 
-                        <Link className="inline-block mt-4 mb-4 btn text-teal-500 text-lg font-MRextrabold link-underline link-teal" to="/">See all projects</Link>
+                            <Link className="inline-block mt-4 mb-4 btn text-teal-500 text-lg font-MRextrabold link-underline link-teal" to="/">See all projects</Link>
 
-                    </div>
+                        </div>
 
-                    <div className="flex flex-wrap w-full lg:w-2/3 lg:pl-5">
+                        <div className="flex flex-wrap w-full lg:w-2/3 lg:pl-5">
 
-                        <BackgroundImage
-                            className="home-project-image bg-cover bg-center py-40 w-full bg-beige-100"
-                            fluid={props.data.eslandCare.childImageSharp.fluid}
-                            >
-                        </BackgroundImage>
+                            <BackgroundImage
+                                className="home-project-image bg-cover bg-center py-40 w-full bg-beige-100"
+                                fluid={props.data.eslandCare.childImageSharp.fluid}
+                                >
+                            </BackgroundImage>
 
-                        <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">
+                            <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">
 
-                            <h2 className="text-xl lg:text-2xl font-MRextrabold mb-4">Esland Care</h2>
+                                <h2 className="text-xl lg:text-2xl font-MRextrabold mb-4">Esland Care</h2>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestiae quidem dolore qui a optio earum maxime magni eius, quas, explicabo ea quo? Minima, veniam. Blanditiis soluta numquam, ullam sequi?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestiae quidem dolore qui a optio earum maxime magni eius, quas, explicabo ea quo? Minima, veniam. Blanditiis soluta numquam, ullam sequi?</p>
 
-                            <Link className="inline-block mt-4 mb-4 btn text-beige-100 text-lg font-MRextrabold link-underline link-beige" to="/">See more projects</Link>
+                                <Link className="inline-block mt-4 mb-4 btn text-beige-100 text-lg font-MRextrabold link-underline link-beige" to="/">See more projects</Link>
+                            </div>
+
                         </div>
 
                     </div>
 
                 </div>
+
+
+
 
                 <div className="container max-w-full flex flex-wrap my-4 px-6 lg:my-16">
 

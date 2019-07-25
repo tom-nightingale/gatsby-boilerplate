@@ -29,6 +29,23 @@ body {
     @apply font-MRregular leading-relaxed;
 }
 
+@screen md {
+    .recent-projects {
+        &:after {
+            content: '';
+            @apply absolute;
+            @apply top-0;
+            @apply right-0;
+            @apply z-0;
+            @apply min-h-128;
+            @apply w-3/4;
+            @apply bg-beige-100;
+            @apply -mt-96;
+        }
+    }
+}
+
+
 .bg-multiply {
     background-blend-mode: multiply;
 }
