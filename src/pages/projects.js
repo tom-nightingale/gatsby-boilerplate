@@ -13,9 +13,10 @@ import LeagueLogoText from "../svg/league-logo-text.svg";
 
 const ProjectsPage = (props) => {
 
-    //Declare projects dataset
-    console.log(props);
+    // console.log(props);
     console.log(props.data.leagueBg.childImageSharp.fluid)
+
+    //Declare projects dataset
     const projects = [
         {
             title: "Carlton Town Football Club",
@@ -97,23 +98,27 @@ const ProjectsPage = (props) => {
                         return (
                             <div key={project.title} className="w-full sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-4">
 
-                                <AniLink
-                                    paintDrip
-                                    duration={.75}
-                                    hex="#0b1529"
-                                    to={project.url}
-                                    className="flex flex-wrap content-center justify-center relative group overflow-hidden w-full bg-white min-h-64 lg:min-h-128 bg-gray-100"
-                                >
+                                <BackgroundImage fluid={props.data.leagueBg.childImageSharp.fluid} className="relative overflow-hidden bg-cover bg-center group">
 
-                                    <div className="transition-all transition-250">
-                                        <h2 className="text-teal-500">{project.title}</h2>
-                                        <p>{project.coverImage}</p>
-                                        <ul>
-                                            {services}
-                                        </ul>
-                                    </div>
+                                    <AniLink
+                                        paintDrip
+                                        duration={.75}
+                                        hex="#0b1529"
+                                        to={project.url}
+                                        className="absolute top-0 left-0 min-h-full w-100 translate-y-full group-hover:translate-y-0 flex flex-wrap content-center justify-center relative overflow-hidden w-full bg-white min-h-64 lg:min-h-128 bg-navy-500"
+                                    >
 
-                                </AniLink>
+                                        <div className="transition-all transition-250 text-beige-100 text-center p-8">
+                                            <h2 className="font-MRextrabold text-2xl lg:mb-4 text-teal-500">{project.title}</h2>
+                                            <p>{project.coverImage}</p>
+                                            <ul>
+                                                {services}
+                                            </ul>
+                                        </div>
+
+                                    </AniLink>
+
+                                </BackgroundImage>
 
                             </div>
                         )

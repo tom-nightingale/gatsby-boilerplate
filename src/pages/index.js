@@ -8,7 +8,7 @@ import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"
 import Navigation from "../components/Navigation"
-import Bucket from "../components/Bucket"
+import ImageCard from "../components/ImageCard"
 import ContactForm from "../components/ContactForm.js"
 
 import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
@@ -17,8 +17,6 @@ import LeagueLogoText from "../svg/league-logo-text.svg";
 
 
 const IndexPage = (props) => {
-
-    console.log(props);
 
     return (
 
@@ -109,9 +107,6 @@ const IndexPage = (props) => {
 
                 </div>
 
-
-
-
                 <div className="container max-w-full flex flex-wrap my-4 px-6 lg:my-16">
 
                     <div className="mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
@@ -140,9 +135,9 @@ const IndexPage = (props) => {
 
                 <div className="container max-w-full flex flex-wrap my-4 lg:my-16 px-4 md:px-0">
 
-                    <Bucket heading="Strategy" intro="How we start every project" img={props.data.heroBg} alt="" />
-                    <Bucket heading="Development" intro="Built with the latest standards" img={props.data.heroBg} alt="" />
-                    <Bucket heading="Results" intro="Continual analysis to achieve your goals" img={props.data.heroBg} alt=""/>
+                    <ImageCard heading="Strategy" intro="How we start every project" img={props.data.heroBg} alt="" />
+                    <ImageCard heading="Development" intro="Built with the latest standards" img={props.data.eslandCare} alt="" />
+                    <ImageCard heading="Results" intro="Continual analysis to achieve your goals" img={props.data.leagueBg} alt=""/>
 
                 </div>
 
