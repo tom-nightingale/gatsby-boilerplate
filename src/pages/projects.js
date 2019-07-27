@@ -13,9 +13,6 @@ import LeagueIconBeige from "../svg/league-icon-beige.svg";
 
 const ProjectsPage = (props) => {
 
-    // console.log(props);
-    console.log(props.data.leagueBg.childImageSharp.fluid)
-
     //Declare projects dataset
     const projects = [
         {
@@ -61,9 +58,28 @@ const ProjectsPage = (props) => {
 
             <div>
 
-                <Header />
+                <Header img={props.data.leagueBg.childImageSharp.fluid} />
+
+                <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">
+
+                    <BackgroundImage className="latest-project w-full" fluid={props.data.leagueBg.childImageSharp.fluid}>
+                    </BackgroundImage>
+
+                        <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
+                            <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">Latest Projects</h2>
+                            <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">Midland Speed Championships</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, porro. Alias iste ex, quas nisi temporibus adipisci fugiat voluptates vel hic blanditiis, sunt illo eligendi? Voluptatibus sunt suscipit ut fugiat.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, expedita blanditiis odit maxime. Laudantium veniam est, temporibus quas aperiam rerum tempora deleniti, eaque cum quidem quisquam quam, culpa iusto ad.</p>
+                            <AniLink className="link-underline link-teal" to="/">View project</AniLink>
+                        </div>
+
+                </div>
+
+
 
                 <div className="container max-w-full w-11/12 flex flex-wrap mx-auto py-4 sm:py-8 md:py-12 lg:py-16">
+
+                    <h2 className="w-full text-center text-2xl ">Recent projects</h2>
 
                 {
                     projects.map(function(project) {
@@ -91,7 +107,7 @@ const ProjectsPage = (props) => {
 
                                             <LeagueIconBeige className="w-8 mx-auto mb-4"/>
 
-                                            <h2 className="font-MRextrabold text-2xl lg:mb-4 text-beige-100">{project.title}</h2>
+                                            <h2 className="text-2xl lg:mb-4 text-beige-100">{project.title}</h2>
                                             <p>{project.coverImage}</p>
                                             <ul>
                                                 {services}
