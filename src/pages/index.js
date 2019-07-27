@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import Img from 'gatsby-image'
 import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"

@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import LeagueLogoText from "../svg/league-logo-text.svg";
-import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
+import { IoIosMailUnread, IoLogoInstagram, IoLogoLinkedin, IoLogoTwitter } from "react-icons/io";
 
 const Footer = (props) => {
     return (

@@ -1,11 +1,9 @@
 import React from "react"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { IoIosMenu, IoMdClose, IoIosMailUnread } from "react-icons/io"
 
 import LeagueLogoText from "../svg/league-logo-text.svg"
-import LeagueBgImage from "../img/league-bg.jpg"
-
-import { IoIosMenu, IoMdClose, IoIosMailUnread } from "react-icons/io"
 
 
 const Navigation = class extends React.Component {
@@ -40,7 +38,7 @@ const Navigation = class extends React.Component {
 
     render() {
 
-      const subItems = {
+      /*const subItems = {
           "web design" : "/",
           "web development" : "/",
           "seo" : "/",
@@ -48,7 +46,7 @@ const Navigation = class extends React.Component {
           "content marketing" : "/",
           "copywriting" : "/",
           "telecoms" : "/"
-      }
+      }*/
 
       return (
           <div className="min-w-full flex flex-wrap justify-end">
