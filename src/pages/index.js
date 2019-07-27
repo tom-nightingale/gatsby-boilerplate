@@ -27,12 +27,12 @@ const IndexPage = (props) => {
 
                     <BackgroundImage
                         fluid={props.data.leagueBg.childImageSharp.fluid}
-                        className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-16 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
+                        className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
                       >
 
                         <AniLink
                             to="/"
-                            className="w-32 mb-8"
+                            className="w-32"
                             paintDrip
                             duration={.75}
                             hex="#0b1529">
@@ -58,7 +58,7 @@ const IndexPage = (props) => {
 
                     <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
 
-                        <Navigation />
+                        <Navigation classList="text-navy-600"/>
 
                         <BackgroundImage
                             fluid={props.data.leagueBg.childImageSharp.fluid}

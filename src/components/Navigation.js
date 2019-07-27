@@ -51,7 +51,7 @@ const Navigation = class extends React.Component {
       return (
           <div className="min-w-full flex flex-wrap justify-end">
 
-              <nav className="md:flex flex-wrap justify-around items-center md:py-16 lg:py-12 xl:py-16 px-4 w-full lg:w-3/4 xl:w-1/2 bg-white font-MRextrabold">
+              <nav className={`w-full md:flex flex-wrap justify-around items-center px-4 md:py-8 lg:w-3/4 xl:w-1/2 font-MRbold text-beige-100 ${this.props.classList}`}>
 
               <AniLink
                   to="/"
@@ -74,8 +74,8 @@ const Navigation = class extends React.Component {
                   hex="#0b1529"
                   className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">work with us</AniLink>
 
-                  <a className="absolute md:relative z-10 inline-block top-0 right-0 mt-12 mr-8 md:mt-0 md:mr-0 p-1 md:p-0" href="/" onClick={(e) => this.toggleHamburger(e) }>
-                      <IoIosMenu className="text-beige-100 md:text-navy-500 text-4xl" />
+                  <a className="absolute md:relative z-10 inline-block top-0 right-0 m-4 p-4 md:p-0" href="/" onClick={(e) => this.toggleHamburger(e) }>
+                      <IoIosMenu className="text-4xl" />
                   </a>
 
               </nav>
@@ -133,6 +133,10 @@ const Navigation = class extends React.Component {
           </div>
       )
     }
+}
+
+Navigation.defaultProps = {
+    classList: '',
 }
 
 export default Navigation;

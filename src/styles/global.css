@@ -32,6 +32,15 @@ body {
     @apply font-MRregular leading-relaxed;
 }
 
+.bg-multiply {
+    background-blend-mode: multiply;
+}
+
+.transition-cubic {
+    transition-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+}
+
+/* Homepage after element to create the beige background */
 @screen md {
     .recent-projects {
         &:after {
@@ -48,11 +57,7 @@ body {
     }
 }
 
-
-.bg-multiply {
-    background-blend-mode: multiply;
-}
-
+/* setting some global link styles */
 .link-underline {
     position: relative;
     transition: .25s;
@@ -106,10 +111,12 @@ body {
     }
 }
 
+
+/*Fixes for gatsby background image and tailwind conflicts */
 @screen md {
     .home-league-image {
         @apply w-1/2;
-        @apply p-16;
+        @apply p-12;
     }
 
     .home-hero-image {
@@ -128,7 +135,7 @@ body {
 
 @screen lg {
     .home-league-image {
-        @apply pl-20;
+        /* @apply pl-20; */
         @apply w-2/5;
     }
 }
