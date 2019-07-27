@@ -148,9 +148,9 @@ const IndexPage = (props) => {
 
                 <div className="container max-w-full flex flex-wrap my-4 lg:my-16 px-4 md:px-0">
 
-                    <ImageCard heading="Strategy" intro="How we start every project" img={props.data.heroBg} alt="" />
-                    <ImageCard heading="Development" intro="Built with the latest standards" img={props.data.eslandCare} alt="" />
-                    <ImageCard heading="Results" intro="Continual analysis to achieve your goals" img={props.data.leagueBg} alt=""/>
+                    <ImageCard heading="Strategy" intro="How we start every project" img={props.data.strategyBg} alt="" />
+                    <ImageCard heading="Development" intro="Built with the latest standards" img={props.data.developmentBg} alt="" />
+                    <ImageCard heading="Results" intro="Continual analysis to achieve your goals" img={props.data.resultsBg} alt=""/>
 
                 </div>
 
@@ -181,6 +181,27 @@ export const pageQuery = graphql`
       }
     }
     leagueBg: file(relativePath: { eq: "league-bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    strategyBg: file(relativePath: { eq: "strategy-bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    developmentBg: file(relativePath: { eq: "development-bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    resultsBg: file(relativePath: { eq: "results-bg.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
