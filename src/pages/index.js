@@ -58,7 +58,7 @@ const IndexPage = (props) => {
 
                     <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
 
-                        <Navigation classList="text-navy-600"/>
+                        <Navigation classList="text-navy-600" iconColor="text-beige-100 md:text-navy-600"/>
 
                         <BackgroundImage
                             fluid={props.data.leagueBg.childImageSharp.fluid}

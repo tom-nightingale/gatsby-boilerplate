@@ -74,7 +74,7 @@ const Navigation = class extends React.Component {
                   hex="#0b1529"
                   className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">work with us</AniLink>
 
-                  <a className="absolute md:relative z-10 inline-block top-0 right-0 m-4 p-4 md:p-0" href="/" onClick={(e) => this.toggleHamburger(e) }>
+                  <a className={`absolute md:relative z-10 inline-block top-0 right-0 m-4 p-4 md:p-0 ${this.props.iconColor}`} href="/" onClick={(e) => this.toggleHamburger(e) }>
                       <IoIosMenu className="text-4xl" />
                   </a>
 
@@ -137,6 +137,7 @@ const Navigation = class extends React.Component {
 
 Navigation.defaultProps = {
     classList: '',
+    iconColor: '',
 }
 
 export default Navigation;
