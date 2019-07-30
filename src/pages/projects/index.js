@@ -7,6 +7,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import TemplateWrapper from "../../components/TemplateWrapper"
 import PageHeader from "../../components/PageHeader"
+import ContactForm from "../../components/ContactForm"
 
 import LeagueIconBeige from "../../svg/league-icon-beige.svg"
 
@@ -133,6 +134,8 @@ const ProjectsPage = (props) => {
                 </div>
 
             </div>
+
+            <ContactForm />
 
         </TemplateWrapper>
     );
