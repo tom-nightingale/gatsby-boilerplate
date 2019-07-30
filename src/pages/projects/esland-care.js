@@ -7,9 +7,6 @@ import TemplateWrapper from "../../components/TemplateWrapper"
 import ContactForm from "../../components/ContactForm"
 import PageHeader from "../../components/PageHeader"
 
-import LeagueIconBeige from "../../svg/league-icon-beige.svg"
-
-
 const ProjectsPage = (props) => {
 
     //Declare projects dataset
@@ -42,7 +39,7 @@ const ProjectsPage = (props) => {
                             <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">Latest Projects</h2>
                             <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{project.title}</p>
                             <div dangerouslySetInnerHTML={{ __html: project.intro }}></div>
-                            <a className="link-underline link-teal" href={project.url} target="_blank">View live website</a>
+                            <a className="link-underline link-teal" href={project.url} target="_blank" rel="noopener noreferrer">View live website</a>
                         </div>
 
                 </div>

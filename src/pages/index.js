@@ -45,13 +45,20 @@ const IndexPage = (props) => {
 
                             <p className="font-MRbold leading-loose max-w-md lg:max-w-md sm:text-lg md:text-base xl:text-xl">We pair beautifully designed websites with brilliant online marketing to help your business grow.</p>
 
+                            <AniLink
+                                paintDrip
+                                duration={.75}
+                                hex="#1BB6BA"
+                                to="/projects"
+                                className="link-underline link-teal">View our work</AniLink>
+
                         </div>
 
                         <AniLink
                             paintDrip
                             duration={.75}
                             hex="#0b1529"
-                            to="/"
+                            to="/contact"
                             className="flex flex-wrap align-bottom hover:text-teal-500 transition-all transition-250"><IoIosMailUnread className="text-2xl sm:text-3xl md:text-2xl" /> <span className="font-MRbold ml-1 sm:text-base">work with us</span></AniLink>
 
                     </BackgroundImage>

@@ -75,7 +75,7 @@ const ProjectsPage = (props) => {
                                 className="link-underline link-teal"
                                 paintDrip
                                 duration={.75}
-                                hex="#0b1529">View project
+                                hex="#1BB6BA">View project
                             </AniLink>
                         </div>
 
