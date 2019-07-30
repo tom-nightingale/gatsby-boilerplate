@@ -54,7 +54,7 @@ const Navigation = class extends React.Component {
               <nav className={`w-full md:flex flex-wrap justify-around items-center px-4 md:py-8 lg:w-3/4 xl:w-1/2 font-MRbold text-beige-100 ${this.props.classList}`}>
 
               <AniLink
-                  to="/"
+                  to="/services"
                   paintDrip
                   duration={.75}
                   hex="#0b1529"
@@ -68,7 +68,7 @@ const Navigation = class extends React.Component {
                   className="hidden md:inline-block hover:text-teal-500 transition-all transition-250">projects</AniLink>
 
               <AniLink
-                  to="/"
+                  to="/contact"
                   paintDrip
                   duration={.75}
                   hex="#0b1529"
@@ -97,7 +97,7 @@ const Navigation = class extends React.Component {
                           paintDrip
                           duration={.75}
                           hex="#0b1529"
-                          to="/"
+                          to="/services"
                           className="py-3">our services</AniLink>
 
                       {/*
@@ -117,15 +117,15 @@ const Navigation = class extends React.Component {
                           paintDrip
                           duration={.75}
                           hex="#0b1529"
-                          to="/"
+                          to="/news"
                           className="py-3">latest news</AniLink>
 
                       <AniLink
-                          to="/"
+                          to="/contact"
                           paintDrip
                           duration={.75}
                           hex="#0b1529"
-                          className="flex flex-wrap items-center py-3"><IoIosMailUnread className="text-2xl mr-2"/> work with us</AniLink>
+                          className="flex flex-wrap items-center py-3"><IoIosMailUnread className="text-2xl mr-2"/>work with us</AniLink>
                   </nav>
 
               </div>
