@@ -71,7 +71,7 @@ const ProjectsPage = (props) => {
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, porro. Alias iste ex, quas nisi temporibus adipisci fugiat voluptates vel hic blanditiis, sunt illo eligendi? Voluptatibus sunt suscipit ut fugiat.</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, expedita blanditiis odit maxime. Laudantium veniam est, temporibus quas aperiam rerum tempora deleniti, eaque cum quidem quisquam quam, culpa iusto ad.</p>
                             <AniLink
-                                to="/"
+                                to="/projects/midland-speed-champs"
                                 className="link-underline link-teal"
                                 paintDrip
                                 duration={.75}
