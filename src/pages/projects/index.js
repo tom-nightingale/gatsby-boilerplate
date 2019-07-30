@@ -27,28 +27,28 @@ const ProjectsPage = (props) => {
             bgColor: 'red',
             coverImage: "eslandCare",
             services: ["Web Design & Development"],
-            url: "",
+            url: "safe-haven-day-nursery",
         },
         {
             title: "Esland Care",
             bgColor: 'blue',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "",
+            url: "esland-care",
         },
         {
             title: "Midland Speed Champs.",
             bgColor: 'green',
             coverImage: "eslandCare",
-            services: ["Web Development"],
-            url: "",
+            services: ["Web Development", "Custom Development"],
+            url: "midland-speed-champs",
         },
         {
             title: "Trust Precision Engineering",
             bgColor: 'yellow',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "",
+            url: "trust-precision-engineering",
         }
     ];
 
