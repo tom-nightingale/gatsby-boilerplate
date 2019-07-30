@@ -20,35 +20,35 @@ const ProjectsPage = (props) => {
             bgColor: '#000',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "carlton-town-fc",
+            url: "projects/carlton-town-fc",
         },
         {
             title: "Safe Haven Day Nursery",
             bgColor: 'red',
             coverImage: "eslandCare",
             services: ["Web Design & Development"],
-            url: "safe-haven-day-nursery",
+            url: "projects/safe-haven-day-nursery",
         },
         {
             title: "Esland Care",
             bgColor: 'blue',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "esland-care",
+            url: "projects/esland-care",
         },
         {
             title: "Midland Speed Champs.",
             bgColor: 'green',
             coverImage: "eslandCare",
             services: ["Web Development", "Custom Development"],
-            url: "midland-speed-champs",
+            url: "projects/midland-speed-champs",
         },
         {
             title: "Trust Precision Engineering",
             bgColor: 'yellow',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "trust-precision-engineering",
+            url: "projects/trust-precision-engineering",
         }
     ];
 
@@ -87,46 +87,48 @@ const ProjectsPage = (props) => {
 
                     <h2 className="w-full text-center text-2xl ">Recent projects</h2>
 
-                {
-                    projects.map(function(project) {
+                    {
+                        projects.map(function(project) {
 
-                        var services = project.services.map(function(service) {
-                            return(
-                                <li key={service}>{service}</li>
-                            )
-                        });
+                            var services = project.services.map(function(service) {
+                                return(
+                                    <li key={service}>{service}</li>
+                                )
+                            });
 
-                        return (
-                            <div key={project.title} className="w-full sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-4">
+                            return (
+                                <div key={project.title} className="w-full sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-4">
 
-                                <BackgroundImage fluid={props.data.leagueBg.childImageSharp.fluid} className="cursor-pointer relative overflow-hidden bg-cover bg-center group">
+                                    <AniLink
+                                        to={project.url}
+                                        className="cursor-pointer relative overflow-hidden bg-cover bg-center group bg-beige-100"
+                                        paintDrip
+                                        duration={.75}
+                                        hex="#1BB6BA">
 
-                                <AniLink
-                                    to={`projects/${project.url}`}
-                                    className="cursor-pointer relative top-0 left-0 translate-x-full group-hover:translate-x-0 flex flex-wrap content-center justify-center w-full bg-teal-500 opacity-95 transition-all transition-cubic transition-750 min-h-64 lg:min-h-128"
-                                    paintDrip
-                                    duration={.75}
-                                    hex="#1BB6BA">
+                                        <BackgroundImage
+                                            fluid={props.data.leagueBg.childImageSharp.fluid}
+                                            className="">
 
-                                        <div className="transition-all transition-250 text-beige-100 text-center p-8">
+                                            <div className="cursor-pointer relative top-0 left-0 translate-x-full group-hover:translate-x-0 transition-all transition-750 text-beige-100 text-center p-8 flex flex-wrap flex-col content-center justify-center w-full bg-teal-500 opacity-95 transition-cubic min-h-64 lg:min-h-128">
 
-                                            <LeagueIconBeige className="w-8 mx-auto mb-4"/>
+                                                <LeagueIconBeige className="w-8 mx-auto mb-4"/>
 
-                                            <h2 className="text-2xl lg:mb-4 text-beige-100">{project.title}</h2>
-                                            <p>{project.coverImage}</p>
-                                            <ul>
-                                                {services}
-                                            </ul>
-                                        </div>
+                                                <h2 className="text-2xl lg:mb-4 text-beige-100">{project.title}</h2>
+                                                <p>{project.coverImage}</p>
+                                                <ul>
+                                                    {services}
+                                                </ul>
+                                            </div>
+
+                                        </BackgroundImage>
 
                                     </AniLink>
 
-                                </BackgroundImage>
-
-                            </div>
-                        )
-                    })
-                }
+                                </div>
+                            )
+                        })
+                    }
 
                 </div>
 

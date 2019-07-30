@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "League Digital",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "Web design and digital marketing in Nottingham",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -21,7 +21,7 @@
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-react-svg": "^2.1.1",
     "gatsby-plugin-sharp": "^2.2.2",
-    "gatsby-plugin-transition-link": "1.9.1",
+    "gatsby-plugin-transition-link": "^1.9.1",
     "gatsby-source-filesystem": "^2.1.2",
     "gatsby-transformer-sharp": "^2.2.1",
     "gsap": "^2.1.3",
