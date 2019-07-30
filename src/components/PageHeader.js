@@ -7,7 +7,7 @@ import Navigation from "../components/Navigation"
 
 import LeagueLogoText from "../svg/league-logo-text.svg"
 
-const Header = (props) => {
+const PageHeader = (props) => {
 
     return (
 
@@ -42,4 +42,4 @@ const Header = (props) => {
 
 }
 
-export default Header;
+export default PageHeader;

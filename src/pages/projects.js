@@ -6,9 +6,9 @@ import BackgroundImage from 'gatsby-background-image'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import TemplateWrapper from "../components/TemplateWrapper"
-import Header from "../components/Header"
+import PageHeader from "../components/PageHeader"
 
-import LeagueIconBeige from "../svg/league-icon-beige.svg";
+import LeagueIconBeige from "../svg/league-icon-beige.svg"
 
 
 const ProjectsPage = (props) => {
@@ -58,7 +58,7 @@ const ProjectsPage = (props) => {
 
             <div>
 
-                <Header img={props.data.leagueBg.childImageSharp.fluid} />
+                <PageHeader img={props.data.leagueBg.childImageSharp.fluid} />
 
                 <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">
 
