@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 
 import BackgroundImage from 'gatsby-background-image'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
