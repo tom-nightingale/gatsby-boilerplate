@@ -70,7 +70,13 @@ const ProjectsPage = (props) => {
                             <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">Midland Speed Championships</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, porro. Alias iste ex, quas nisi temporibus adipisci fugiat voluptates vel hic blanditiis, sunt illo eligendi? Voluptatibus sunt suscipit ut fugiat.</p>
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, expedita blanditiis odit maxime. Laudantium veniam est, temporibus quas aperiam rerum tempora deleniti, eaque cum quidem quisquam quam, culpa iusto ad.</p>
-                            <AniLink className="link-underline link-teal" to="/">View project</AniLink>
+                            <AniLink
+                                to="/"
+                                className="link-underline link-teal"
+                                paintDrip
+                                duration={.75}
+                                hex="#0b1529">View project
+                            </AniLink>
                         </div>
 
                 </div>
@@ -95,13 +101,12 @@ const ProjectsPage = (props) => {
 
                                 <BackgroundImage fluid={props.data.leagueBg.childImageSharp.fluid} className="cursor-pointer relative overflow-hidden bg-cover bg-center group">
 
-                                    <AniLink
-                                        paintDrip
-                                        duration={.75}
-                                        hex="#1BB6BA"
-                                        to={`projects/${project.url}`}
-                                        className="cursor-pointer relative top-0 left-0 translate-x-full group-hover:translate-x-0 flex flex-wrap content-center justify-center w-full bg-teal-500 opacity-95 transition-all transition-cubic transition-750 min-h-64 lg:min-h-128 "
-                                    >
+                                <AniLink
+                                    to={`projects/${project.url}`}
+                                    className="cursor-pointer relative top-0 left-0 translate-x-full group-hover:translate-x-0 flex flex-wrap content-center justify-center w-full bg-teal-500 opacity-95 transition-all transition-cubic transition-750 min-h-64 lg:min-h-128"
+                                    paintDrip
+                                    duration={.75}
+                                    hex="#1BB6BA">
 
                                         <div className="transition-all transition-250 text-beige-100 text-center p-8">
 

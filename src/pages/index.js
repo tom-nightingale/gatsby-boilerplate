@@ -109,8 +109,8 @@ const IndexPage = (props) => {
                                     duration={.75}
                                     hex="#FEFAEF"
                                     className="mt-4 mb-4 text-beige-100 link-underline link-beige"
-                                    to="/projects">
-                                    See more projects>
+                                    to="/projects/esland-care">
+                                    View project
                                 </AniLink>
                             </div>
 
