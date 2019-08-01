@@ -46,13 +46,13 @@ const ProjectsPage = (props) => {
 
                 </div>
 
-                <ul className="flex flex-wrap p-8 mb-8">
-                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 text-center font-MRbold text-center flex flex-col items-center font-MRextrabold text-lg"><IoLogoWordpress className="text-6xl opacity-75 mb-4" /> Wordpress CMS</li>
-                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 text-center font-MRbold text-center flex flex-col items-center font-MRextrabold text-lg"><IoMdCodeWorking className="text-6xl opacity-75 mb-4" /> Custom Theme</li>
-                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 text-center font-MRbold text-center flex flex-col items-center font-MRextrabold text-lg"><IoIosPeople className="text-6xl opacity-75 mb-4" />User profiles for each manager & club executive</li>
-                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 text-center font-MRbold text-center flex flex-col items-center font-MRextrabold text-lg"><IoIosAnalytics className="text-6xl opacity-75 mb-4" />Search optimised</li>
-                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 text-center font-MRbold text-center flex flex-col items-center font-MRextrabold text-lg"><IoIosLock className="text-6xl opacity-75 mb-4" /> Secure hosting</li>
-                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 text-center font-MRbold text-center flex flex-col items-center font-MRextrabold text-lg"><IoMdSwitch className="text-6xl opacity-75 mb-4" />Customisable options</li>
+                <ul className="flex flex-wrap p-8 mb-8 text-center font-MRbold">
+                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 flex flex-col items-center text-lg"><IoLogoWordpress className="text-6xl opacity-75 mb-4" /> Wordpress CMS</li>
+                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 flex flex-col items-center text-lg"><IoMdCodeWorking className="text-6xl opacity-75 mb-4" /> Custom Theme</li>
+                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 flex flex-col items-center text-lg"><IoIosPeople className="text-6xl opacity-75 mb-4" />User profiles for each manager & club executive</li>
+                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 flex flex-col items-center text-lg"><IoIosAnalytics className="text-6xl opacity-75 mb-4" />Search optimised</li>
+                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 flex flex-col items-center text-lg"><IoIosLock className="text-6xl opacity-75 mb-4" /> Secure hosting</li>
+                    <li className="w-full md:w-1/2 lg:w-1/3 xl:w-1/6 p-8 flex flex-col items-center text-lg"><IoMdSwitch className="text-6xl opacity-75 mb-4" />Customisable options</li>
                 </ul>
 
                 <div className="w-full mx-auto flex flex-wrap items-center justify-center">
@@ -91,7 +91,7 @@ const ProjectsPage = (props) => {
                     </div>
                 </div>
 
-                
+
 
             </>
 
