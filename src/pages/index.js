@@ -3,6 +3,8 @@ import { graphql } from "gatsby"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
+import { motion, useMotionValue, useTransform } from "framer-motion"
+
 import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"
@@ -30,7 +32,7 @@ const IndexPage = (props) => {
                         className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
                       >
 
-                        <AniLink
+                        {/*<AniLink
                             to="/"
                             className="w-32"
                             paintDrip
@@ -38,6 +40,11 @@ const IndexPage = (props) => {
                             hex="#0b1529">
                             <LeagueLogoText className="inline-block"/>
                         </AniLink>
+                        */}
+
+                        <motion.a className="w-32">
+                            <LeagueLogoText className="inline-block"/>
+                        </motion.a>
 
                         <div>
 
