@@ -47,6 +47,37 @@ nav a[aria-current="page"] {
     @apply text-beige-300;
 }
 
+/* Navigation styling */
+.nav__background {
+    @apply
+        absolute
+        top-0
+        right-0
+        bottom-0
+        z-10
+        w-full
+}
+
+.nav__button {
+    @apply
+        outline-none
+        border-none
+        cursor-pointer
+        absolute
+        z-30;
+  top: 37px;
+  right:7px;
+  width: 45px;
+  height: 45px;
+  border-radius: 3px;
+  background: transparent;
+  display: flex;
+
+  svg {
+      margin: auto;
+  }
+}
+
 /**/
 .bg-multiply {
     background-blend-mode: multiply;
@@ -158,6 +189,17 @@ nav a[aria-current="page"] {
 
     .latest-project {
         @apply w-1/3
+    }
+
+    .nav__button {
+        display: flex;
+        @apply bg-navy-600;
+        top: 22.5px;
+        right: 20px;
+
+        svg {
+            margin: auto;
+        }
     }
 }
 

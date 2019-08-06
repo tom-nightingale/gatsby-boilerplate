@@ -1,4 +1,5 @@
 import React from "react"
+
 import { graphql } from "gatsby"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
@@ -8,7 +9,9 @@ import { motion, useMotionValue, useTransform } from "framer-motion"
 import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"
-import Navigation from "../components/Navigation"
+
+import NavigationHolder from "../components/nav/NavigationHolder"
+
 import ImageCard from "../components/ImageCard"
 import ContactForm from "../components/ContactForm.js"
 
@@ -72,7 +75,7 @@ const IndexPage = (props) => {
 
                     <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
 
-                        <Navigation classList="text-navy-600" iconColor="text-beige-100 md:text-navy-600"/>
+                        <NavigationHolder />
 
                         <BackgroundImage
                             fluid={props.data.leagueBg.childImageSharp.fluid}
