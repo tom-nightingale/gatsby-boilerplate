@@ -25,9 +25,7 @@ const IndexPage = (props) => {
 
     return (
 
-        <TemplateWrapper>
-
-            <NavigationHolder isHomepage="is-homepage" />
+        <TemplateWrapper isHomepage="is-homepage">
 
             <div>
 
@@ -37,16 +35,6 @@ const IndexPage = (props) => {
                         fluid={props.data.leagueBg.childImageSharp.fluid}
                         className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
                       >
-
-                        {/*<AniLink
-                            to="/"
-                            className="w-32"
-                            paintDrip
-                            duration={.75}
-                            hex="#0b1529">
-                            <LeagueLogoText className="inline-block"/>
-                        </AniLink>
-                        */}
 
                         <motion.a className="w-32">
                             <LeagueLogoText className="inline-block"/>

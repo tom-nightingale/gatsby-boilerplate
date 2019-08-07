@@ -58,8 +58,6 @@ const ProjectsPage = (props) => {
 
         <TemplateWrapper>
 
-            <NavigationHolder />
-
             <PageHeader img={props.data.leagueBg.childImageSharp.fluid} />
 
             <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">

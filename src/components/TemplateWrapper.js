@@ -7,7 +7,10 @@ import useSiteMetadata from './SiteMeta'
 import NavigationHolder from "../components/nav/NavigationHolder"
 import Footer from './Footer'
 
-const TemplateWrapper = ({ children }) => {
+const TemplateWrapper = ({ isHomepage, children }) => {
+
+    console.log(isHomepage);
+
   // set the title and description from the meta data
   const { title, description, siteURL } = useSiteMetadata()
   return(
@@ -40,12 +43,17 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content={siteURL} />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      
+
+      <NavigationHolder isHomepage={isHomepage} />
 
       {children}
       <Footer />
       </>
   )
+}
+
+TemplateWrapper.defaultProps = {
+    isHomepage: '',
 }
 
 export default TemplateWrapper
