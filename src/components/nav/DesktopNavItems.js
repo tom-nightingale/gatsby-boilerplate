@@ -1,5 +1,4 @@
 import React from "react"
-import { graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const DesktopNavItems = (props) => {

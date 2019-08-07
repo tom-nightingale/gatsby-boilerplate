@@ -3,7 +3,6 @@ import React from "react"
 import BackgroundImage from 'gatsby-background-image'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import NavigationHolder from "../components/nav/NavigationHolder"
 import DesktopNavItems from "../components/nav/DesktopNavItems"
 
 import LeagueLogoText from "../svg/league-logo-text.svg"

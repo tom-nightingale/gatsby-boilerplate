@@ -7,7 +7,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import TemplateWrapper from "../../components/TemplateWrapper"
 import PageHeader from "../../components/PageHeader"
-import NavigationHolder from "../../components/nav/NavigationHolder"
 import ContactForm from "../../components/ContactForm"
 
 import LeagueIconBeige from "../../svg/league-icon-beige.svg"

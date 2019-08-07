@@ -4,13 +4,11 @@ import { graphql } from "gatsby"
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import { motion, useMotionValue, useTransform } from "framer-motion"
+import { motion } from "framer-motion"
 
 import BackgroundImage from 'gatsby-background-image'
 
 import TemplateWrapper from "../components/TemplateWrapper"
-
-import NavigationHolder from "../components/nav/NavigationHolder"
 import DesktopNavItems from "../components/nav/DesktopNavItems"
 
 import ImageCard from "../components/ImageCard"

@@ -31,6 +31,8 @@
 body {
     @apply font-MRregular leading-relaxed;
     @apply text-navy-600;
+    @apply m-0;
+    @apply p-0;
 }
 
 h1,
