@@ -1,6 +1,5 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import "../styles/tailwind.css"
 import "../styles/global.css"
 
 import useSiteMetadata from './SiteMeta'
@@ -9,8 +8,6 @@ import NavigationHolder from "../components/nav/NavigationHolder"
 import Footer from './Footer'
 
 const TemplateWrapper = ({ isHomepage, children }) => {
-
-    console.log(isHomepage);
 
   // set the title and description from the meta data
   const { title, description, siteURL } = useSiteMetadata()
