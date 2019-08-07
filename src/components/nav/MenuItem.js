@@ -27,7 +27,7 @@ const MenuItem = ({ link, name }) => {
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-        <Link href={link} className="block font-MRextrabold py-2 text-lg text-teal-600">{name}</Link>
+        <Link to={link} className="block font-MRextrabold py-2 text-lg text-teal-600">{name}</Link>
     </motion.div>
   );
 };

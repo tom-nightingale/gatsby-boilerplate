@@ -43,9 +43,9 @@ p {
     @apply mb-4
 }
 
-/* nav a[aria-current="page"] {
+.nav-hold a[aria-current="page"] {
     @apply text-beige-300;
-} */
+}
 
 /* Navigation styling */
 .nav__background {
