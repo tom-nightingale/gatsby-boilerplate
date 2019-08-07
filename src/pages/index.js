@@ -68,7 +68,7 @@ const IndexPage = (props) => {
 
                           <DesktopNavItems />
 
-                          <BackgroundImage fluid={props.data.leagueBg.childImageSharp.fluid} className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover" />
+                          <BackgroundImage fluid={props.data.heroBg.childImageSharp.fluid} className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover" />
 
                     </div>
 
