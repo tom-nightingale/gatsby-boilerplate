@@ -8,7 +8,6 @@ const variants = {
     opacity: 1,
     transition: {
       y: { stiffness: 1000, velocity: -100 },
-      delay: .75
     }
   },
   closed: {
@@ -20,17 +19,16 @@ const variants = {
   }
 };
 
-const colors = ["#FF008C", "#D309E1", "#9C1AFF", "#7700FF", "#4400FF"];
-
 const MenuItem = ({ link, name }) => {
   return (
-    <motion.li
+
+    <motion.div
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-        <Link to={link} className="block font-MRextrabold py-2">{name}</Link>
-    </motion.li>
+        <Link href={link} className="block font-MRextrabold py-2 text-lg text-teal-600">{name}</Link>
+    </motion.div>
   );
 };
 

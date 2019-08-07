@@ -3,7 +3,8 @@ import React from "react"
 import BackgroundImage from 'gatsby-background-image'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-
+import NavigationHolder from "../components/nav/NavigationHolder"
+import DesktopNavItems from "../components/nav/DesktopNavItems"
 
 import LeagueLogoText from "../svg/league-logo-text.svg"
 
@@ -34,11 +35,7 @@ const PageHeader = (props) => {
 
             </div>
 
-            <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 overflow-y-visible">
-
-                
-
-            </div>
+            <DesktopNavItems isPageHeader="true" />
 
             {pageHero.length > 0 &&
                 <div className="flex flex-wrap items-center justify-center flex-col w-full text-center mx-auto text-beige-100 min-h-96">

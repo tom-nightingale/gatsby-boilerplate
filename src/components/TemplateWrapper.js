@@ -4,6 +4,7 @@ import "../styles/global.css"
 
 import useSiteMetadata from './SiteMeta'
 
+import NavigationHolder from "../components/nav/NavigationHolder"
 import Footer from './Footer'
 
 const TemplateWrapper = ({ children }) => {
@@ -39,6 +40,8 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content={siteURL} />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
+      
+
       {children}
       <Footer />
       </>

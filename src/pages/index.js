@@ -11,6 +11,7 @@ import BackgroundImage from 'gatsby-background-image'
 import TemplateWrapper from "../components/TemplateWrapper"
 
 import NavigationHolder from "../components/nav/NavigationHolder"
+import DesktopNavItems from "../components/nav/DesktopNavItems"
 
 import ImageCard from "../components/ImageCard"
 import ContactForm from "../components/ContactForm.js"
@@ -25,6 +26,8 @@ const IndexPage = (props) => {
     return (
 
         <TemplateWrapper>
+
+            <NavigationHolder isHomepage="is-homepage" />
 
             <div>
 
@@ -73,14 +76,11 @@ const IndexPage = (props) => {
 
                     </BackgroundImage>
 
-                    <div className="w-full md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
+                    <div className="md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
 
-                        <NavigationHolder />
+                          <DesktopNavItems />
 
-                        <BackgroundImage
-                            fluid={props.data.leagueBg.childImageSharp.fluid}
-                            className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover">
-                        </BackgroundImage>
+                          <BackgroundImage fluid={props.data.leagueBg.childImageSharp.fluid} className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover" />
 
                     </div>
 

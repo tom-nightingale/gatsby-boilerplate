@@ -43,9 +43,9 @@ p {
     @apply mb-4
 }
 
-nav a[aria-current="page"] {
+/* nav a[aria-current="page"] {
     @apply text-beige-300;
-}
+} */
 
 /* Navigation styling */
 .nav__background {
@@ -54,8 +54,7 @@ nav a[aria-current="page"] {
         top-0
         right-0
         bottom-0
-        z-10
-        w-full
+        w-full;
 }
 
 .nav__button {
@@ -63,10 +62,9 @@ nav a[aria-current="page"] {
         outline-none
         border-none
         cursor-pointer
-        absolute
-        z-30;
-  top: 37px;
-  right:7px;
+        absolute;
+  top: 28px;
+  right: 20px;
   width: 45px;
   height: 45px;
   border-radius: 3px;
@@ -193,19 +191,30 @@ nav a[aria-current="page"] {
 
     .nav__button {
         display: flex;
-        @apply bg-navy-600;
-        top: 22.5px;
-        right: 20px;
+        top: 45px;
 
         svg {
             margin: auto;
+        }
+    }
+
+    .is-homepage {
+        svg path {
+            stroke: #0b1529;
+            transition: 1s;
+        }
+    }
+
+    .menu-open.is-homepage {
+        svg path {
+            stroke: #fff;
+            transition: .5s;
         }
     }
 }
 
 @screen lg {
     .home-league-image {
-        /* @apply pl-20; */
         @apply w-2/5;
     }
 }
