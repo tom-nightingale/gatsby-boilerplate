@@ -1,3 +1,8 @@
+/*include tailwind directives*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: "Manrope Regular";
   font-style: normal;
@@ -24,9 +29,6 @@
 }
 
 /*include tailwind directives*/
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 body {
     @apply font-MRregular leading-relaxed;
