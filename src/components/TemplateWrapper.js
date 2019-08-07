@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import "../styles/tailwind.css"
 import "../styles/global.css"
 
 import useSiteMetadata from './SiteMeta'
