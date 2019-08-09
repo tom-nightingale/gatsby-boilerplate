@@ -1,27 +1,17 @@
-// postcss.config.js
-const purgecss = require('@fullhuman/postcss-purgecss')({
+const tailwindcss = require("tailwindcss");
+const postcssPresetEnv = require("postcss-preset-env");
+const postcssImport = require("postcss-import");
+const postcssResolver = require("postcss-import-resolver");
 
-  // Specify the paths to all of the template files in your project
-  content: [
-    './src/**/*.html',
-    './src/**/*.vue',
-    './src/**/*.jsx',
-    './src/**/*.js',
-    // etc.
-  ],
-
-  // Include any special characters you're using in this regular expression
-  defaultExtractor: content => content.match(/[A-Za-z0-9-_:/]+/g) || []
-})
-
-module.exports = {
+module.exports = () => ({
   plugins: [
-    require('postcss-import'),
-    require('postcss-nested'),
-    require('tailwindcss'),
-    require('autoprefixer'),
-    ...process.env.NODE_ENV === 'production'
-      ? [purgecss]
-      : []
-  ]
-}
+    postcssImport({
+      resolve: postcssResolver({
+        extensions: [".css"],
+        modules: ["node_modules"],
+      }),
+    }),
+    postcssPresetEnv({ stage: 2 }),
+    tailwindcss("./tailwind.config.js"),
+  ],
+})

@@ -15,6 +15,16 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-postcss`,
     {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true,
+        // develop: true, // Enable while using `gatsby develop`
+        tailwind: true,
+        whitelist: ['whitelist'], // Don't remove this selector
+        // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
+      }
+    },
+    {
         resolve: `gatsby-source-filesystem`,
         options: {
           name: `img`,
