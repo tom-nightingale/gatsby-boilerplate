@@ -19,6 +19,7 @@ const sidebar = {
   }),
   closed: {
     clipPath: "circle(0px at 100% 0px)",
+    zIndex: -9999,
     transition: {
       type: "spring",
       stiffness: 400,

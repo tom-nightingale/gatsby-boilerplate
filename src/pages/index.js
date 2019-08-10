@@ -1,23 +1,15 @@
 import React from "react"
 
 import { graphql } from "gatsby"
-
-import AniLink from "gatsby-plugin-transition-link/AniLink"
-
 import { motion } from "framer-motion"
-
+import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 import BackgroundImage from 'gatsby-background-image'
 
-import TemplateWrapper from "../components/TemplateWrapper"
 import DesktopNavItems from "../components/nav/DesktopNavItems"
-
 import ImageCard from "../components/ImageCard"
 import ContactForm from "../components/ContactForm.js"
-
-import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
-
 import LeagueLogoText from "../svg/league-logo-text.svg";
-
 
 const IndexPage = (props) => {
 
