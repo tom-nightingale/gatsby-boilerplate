@@ -7,7 +7,7 @@ const DesktopNavItems = (props) => {
 
     return (
 
-        <div className={`hidden md:flex flex-wrap justify-end pr-12 ${isPageHeader.length > 0 ? ' pl-16 md:w-1/2 lg:w-3/5' : ''} `}>
+        <div className={`hidden md:flex flex-wrap justify-end pr-12 ${isPageHeader.length > 0 ? ' lg:pl-16 md:w-1/2 lg:w-3/5' : ''} `}>
 
             <nav className="w-full md:flex flex-wrap justify-around items-center px-4 py-12 mt-1 lg:w-3/4 xl:w-1/2 font-MRbold">
 
