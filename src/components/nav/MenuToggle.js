@@ -11,10 +11,11 @@ const Path = props => (
   />
 );
 
-const MenuToggle = ({ toggle, currentState, isHomepage }) => {
+const MenuToggle = ( props ) => {
+
     return (
 
-        <button className={`nav__button z-50 ${currentState} ${isHomepage} `} onClick={toggle}>
+        <button className={`nav__button z-50 ${props.currentState} ${props.isHomepage} `} onClick={props.toggle}>
 
           <svg width="23" height="23" viewBox="0 0 23 23">
             <Path
@@ -45,6 +46,5 @@ const MenuToggle = ({ toggle, currentState, isHomepage }) => {
 
     )
 };
-
 
 export default MenuToggle;

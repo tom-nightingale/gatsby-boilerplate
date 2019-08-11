@@ -33,7 +33,6 @@ const NavigationHolder = ( props ) => {
   const [isOpen, toggleOpen] = useCycle(false, true);
   const containerRef = useRef(null);
   const { height } = useDimensions(containerRef);
-  const isHomepage = props.isHomepage;
 
   return (
 
@@ -48,14 +47,10 @@ const NavigationHolder = ( props ) => {
 
           <Navigation />
 
-          <MenuToggle toggle={() => toggleOpen()} currentState={isOpen ? "menu-open" : "menu-closed"} isHomepage={isHomepage} />
+          <MenuToggle toggle={() => toggleOpen()} currentState={isOpen ? "menu-open" : "menu-closed"} isHomepage={props.isHomepage}/>
 
     </motion.nav>
   );
 };
-
-NavigationHolder.defaultProps = {
-    isHomepage: false
-}
 
 export default NavigationHolder;

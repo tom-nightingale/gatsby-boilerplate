@@ -3,13 +3,14 @@ import Helmet from 'react-helmet'
 
 import useSiteMetadata from './SiteMeta'
 
-import NavigationHolder from "../components/nav/NavigationHolder"
+
 import Footer from './Footer'
 
-const TemplateWrapper = ({ isHomepage, children }) => {
+const TemplateWrapper = ({ children }) => {
 
   // set the title and description from the meta data
   const { title, description, siteURL } = useSiteMetadata()
+
   return(
       <>
       <Helmet>
@@ -41,16 +42,11 @@ const TemplateWrapper = ({ isHomepage, children }) => {
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
 
-      <NavigationHolder isHomepage={isHomepage} />
-
       {children}
+
       <Footer />
       </>
   )
-}
-
-TemplateWrapper.defaultProps = {
-    isHomepage: '',
 }
 
 export default TemplateWrapper

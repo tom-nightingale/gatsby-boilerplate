@@ -8,6 +8,7 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import TemplateWrapper from "../../components/TemplateWrapper"
 import PageHeader from "../../components/PageHeader"
 import ContactForm from "../../components/ContactForm"
+import NavigationHolder from "../../components/nav/NavigationHolder"
 
 import LeagueIconBeige from "../../svg/league-icon-beige.svg"
 
@@ -55,7 +56,9 @@ const ProjectsPage = (props) => {
 
     return (
 
-        <TemplateWrapper>
+        <>
+
+            <NavigationHolder />
 
             <PageHeader img={props.data.leagueBg.childImageSharp.fluid} />
 
@@ -133,7 +136,7 @@ const ProjectsPage = (props) => {
 
             <ContactForm />
 
-        </TemplateWrapper>
+        </>
     );
 }
 

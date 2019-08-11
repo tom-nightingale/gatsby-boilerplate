@@ -4,18 +4,21 @@ import { graphql } from "gatsby"
 import { motion } from "framer-motion"
 import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 import AniLink from "gatsby-plugin-transition-link/AniLink"
-import BackgroundImage from 'gatsby-background-image'
+import BackgroundImage from "gatsby-background-image"
 
+import NavigationHolder from "../components/nav/NavigationHolder"
 import DesktopNavItems from "../components/nav/DesktopNavItems"
 import ImageCard from "../components/ImageCard"
 import ContactForm from "../components/ContactForm.js"
-import LeagueLogoText from "../svg/league-logo-text.svg";
+import LeagueLogoText from "../svg/league-logo-text.svg"
 
-const IndexPage = (props) => {
+const IndexPage = ( props ) => {
 
     return (
 
-        <div>
+        <>
+
+            <NavigationHolder isHomepage="is-homepage" />
 
             <div className="relative z-10 container max-w-full md:flex md:flex-wrap md:items-start mx-auto overflow-hidden">
 
@@ -149,7 +152,7 @@ const IndexPage = (props) => {
 
             <ContactForm />
 
-        </div>
+        </>
     );
 }
 
