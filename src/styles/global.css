@@ -81,6 +81,10 @@ p {
   }
 }
 
+nav a[aria-current="page"] {
+    @apply text-teal-100;
+}
+
 /**/
 .bg-multiply {
     background-blend-mode: multiply;

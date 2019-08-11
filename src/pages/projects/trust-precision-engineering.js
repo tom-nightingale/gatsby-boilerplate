@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 
 import BackgroundImage from 'gatsby-background-image'
 
-import TemplateWrapper from "../../components/TemplateWrapper"
 import ContactForm from "../../components/ContactForm"
 import PageHeader from "../../components/PageHeader"
 import NavigationHolder from "../../components/nav/NavigationHolder"

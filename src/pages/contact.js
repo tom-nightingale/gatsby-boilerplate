@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import TemplateWrapper from "../components/TemplateWrapper"
 import ContactForm from "../components/ContactForm"
 import PageHeader from "../components/PageHeader"
 import NavigationHolder from "../components/nav/NavigationHolder"
