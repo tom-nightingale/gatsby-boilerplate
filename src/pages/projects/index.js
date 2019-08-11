@@ -21,35 +21,35 @@ const ProjectsPage = (props) => {
             bgColor: '#000',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "projects/carlton-town-fc",
+            url: "/projects/carlton-town-fc",
         },
         {
             title: "Safe Haven Day Nursery",
             bgColor: 'red',
             coverImage: "eslandCare",
             services: ["Web Design & Development"],
-            url: "projects/safe-haven-day-nursery",
+            url: "/projects/safe-haven-day-nursery",
         },
         {
             title: "Esland Care",
             bgColor: 'blue',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "projects/esland-care",
+            url: "/projects/esland-care",
         },
         {
             title: "Midland Speed Champs.",
             bgColor: 'green',
             coverImage: "eslandCare",
             services: ["Web Development", "Custom Development"],
-            url: "projects/midland-speed-champs",
+            url: "/projects/midland-speed-champs",
         },
         {
             title: "Trust Precision Engineering",
             bgColor: 'yellow',
             coverImage: "leagueBg",
             services: ["Web Design & Development"],
-            url: "projects/trust-precision-engineering",
+            url: "/projects/trust-precision-engineering",
         }
     ];
 
