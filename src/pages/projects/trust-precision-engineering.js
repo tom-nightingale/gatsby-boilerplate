@@ -15,7 +15,7 @@ const ProjectsPage = (props) => {
         intro: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus officia quasi sit eaque magnam temporibus, repellendus ipsa, architecto enim dolorem debitis autem, explicabo quis molestiae omnis quia aliquam nobis laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae cumque dicta excepturi ducimus molestiae voluptatem delectus autem ab quisquam hic, placeat reiciendis labore odit rerum maxime earum, id voluptatum officiis!</p>",
         bgColor: '#000',
         coverImage: "leagueBg",
-        services: ["Web Design & Development", "Custom development"],
+        services: "Web Design & Development, Custom development",
         url: "https://www.trustprecisionengineering.co.uk/",
     }
 

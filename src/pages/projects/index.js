@@ -108,8 +108,7 @@ const ProjectsPage = (props) => {
                                     hex="#1BB6BA">
 
                                     <BackgroundImage
-                                        fluid={props.data.leagueBg.childImageSharp.fluid}
-                                        className="">
+                                        fluid={props.data.leagueBg.childImageSharp.fluid}>
 
                                         <div className="cursor-pointer relative top-0 left-0 translate-x-full group-hover:translate-x-0 transition-all transition-750 text-beige-100 text-center p-8 flex flex-wrap flex-col content-center justify-center w-full bg-teal-500 opacity-95 transition-cubic min-h-64 lg:min-h-128">
 
@@ -151,6 +150,20 @@ export const pageQuery = graphql`
       }
     }
     leagueBg: file(relativePath: { eq: "league-bg.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    midlandSpeedChamps: file(relativePath: { eq: "midland-speed-champs.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1000) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    safeHaven: file(relativePath: { eq: "safeHaven.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
