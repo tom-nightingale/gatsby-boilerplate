@@ -3,6 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
+ require('dotenv').config()
 
 module.exports = {
   siteMetadata: {
@@ -13,6 +14,19 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-datocms`,
+      options: {
+        apiToken: process.env.DATO_API_TOKEN,
+      },
+    },
+    {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `img`,
+          path: `${__dirname}/src/img/`
+        }
+    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-purgecss`,
@@ -23,13 +37,6 @@ module.exports = {
         whitelist: ['whitelist'], // Don't remove this selector
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
-    },
-    {
-        resolve: `gatsby-source-filesystem`,
-        options: {
-          name: `img`,
-          path: `${__dirname}/src/img/`
-        }
     },
     {
         resolve: 'gatsby-plugin-react-svg',

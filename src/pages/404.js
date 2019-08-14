@@ -8,8 +8,6 @@ import PageHeader from "../components/PageHeader"
 import ContactForm from "../components/ContactForm"
 import NavigationHolder from "../components/nav/NavigationHolder"
 
-import LeagueIconBeige from "../svg/league-icon-beige.svg"
-
 
 const NotFoundPage = (props) => {
 

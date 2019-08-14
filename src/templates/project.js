@@ -3,20 +3,20 @@ import { graphql } from "gatsby"
 
 import BackgroundImage from 'gatsby-background-image'
 
-import ContactForm from "../../components/ContactForm"
-import PageHeader from "../../components/PageHeader"
-import NavigationHolder from "../../components/nav/NavigationHolder"
+import ContactForm from "../components/ContactForm"
+import PageHeader from "../components/PageHeader"
+import NavigationHolder from "../components/nav/NavigationHolder"
 
-const ProjectsPage = (props) => {
+const ProjectsPage = ({props, data}) => {
 
     //Declare projects dataset
     const project = {
-        title: "Safe Haven Day Nursery",
+        title: "Esland Care",
         intro: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus officia quasi sit eaque magnam temporibus, repellendus ipsa, architecto enim dolorem debitis autem, explicabo quis molestiae omnis quia aliquam nobis laborum.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae cumque dicta excepturi ducimus molestiae voluptatem delectus autem ab quisquam hic, placeat reiciendis labore odit rerum maxime earum, id voluptatum officiis!</p>",
         bgColor: '#000',
         coverImage: "leagueBg",
         services: "Web Design & Development",
-        url: "http://www.safehavennursery.co.uk/",
+        url: "https://www.eslandcare.co.uk/",
     }
 
     return (
@@ -26,13 +26,13 @@ const ProjectsPage = (props) => {
             <NavigationHolder />
 
             <PageHeader
-                img={props.data.safeHaven.childImageSharp.fluid}
+                img={props.data.eslandCare.childImageSharp.fluid}
                 heroTitle={project.title}
                 projectServices={project.services} />
 
             <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">
 
-                <BackgroundImage className="latest-project w-full" fluid={props.data.safeHaven.childImageSharp.fluid}>
+                <BackgroundImage className="latest-project w-full" fluid={props.data.eslandCare.childImageSharp.fluid}>
                 </BackgroundImage>
 
                     <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
@@ -47,19 +47,19 @@ const ProjectsPage = (props) => {
             <div className="w-full mx-auto flex flex-wrap items-center justify-center">
                 <div className="w-full md:w-2/6 lg:w-1/3 p-4 md: p-8">
                     <BackgroundImage
-                        fluid={props.data.safeHaven.childImageSharp.fluid}
+                        fluid={props.data.eslandCare.childImageSharp.fluid}
                         className="bg-beige-100 min-h-128">
                     </BackgroundImage>
                 </div>
                 <div className="w-full md:w-2/6 lg:w-1/3 p-4 md: p-8">
                     <BackgroundImage
-                        fluid={props.data.safeHaven.childImageSharp.fluid}
+                        fluid={props.data.eslandCare.childImageSharp.fluid}
                         className="bg-beige-100 min-h-128">
                     </BackgroundImage>
                 </div>
                 <div className="w-full md:w-2/6 lg:w-1/3 p-4 md: p-8">
                     <BackgroundImage
-                        fluid={props.data.safeHaven.childImageSharp.fluid}
+                        fluid={props.data.eslandCare.childImageSharp.fluid}
                         className="bg-beige-100 min-h-128">
                     </BackgroundImage>
                 </div>
@@ -68,13 +68,13 @@ const ProjectsPage = (props) => {
             <div className="w-full mx-auto flex flex-wrap items-center justify-center">
                 <div className="w-full md:w-2/4 lg:w-1/3 p-4 md: p-8">
                     <BackgroundImage
-                        fluid={props.data.safeHaven.childImageSharp.fluid}
+                        fluid={props.data.eslandCare.childImageSharp.fluid}
                         className="bg-beige-100 min-h-128">
                     </BackgroundImage>
                 </div>
                 <div className="w-full md:w-2/4 lg:w-1/3 p-4 md: p-8">
                     <BackgroundImage
-                        fluid={props.data.safeHaven.childImageSharp.fluid}
+                        fluid={props.data.eslandCare.childImageSharp.fluid}
                         className="bg-beige-100 min-h-128">
                     </BackgroundImage>
                 </div>
@@ -97,14 +97,27 @@ const ProjectsPage = (props) => {
 
 export default ProjectsPage;
 
-export const pageQuery = graphql`
-  query {
-    safeHaven: file(relativePath: { eq: "safe-haven.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
+export const query = graphql`
+  query ProjectQuery($slug: String!) {
+    datoCmsProject(slug: { eq: $slug }) {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
+      projectName
+      heroHeadline
+      content
+      projectUrl
+      mainImage {
+        url
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      }
+      gallery {
+        fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
+          src
         }
       }
     }
   }
-`;
+`

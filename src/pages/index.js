@@ -33,9 +33,9 @@ const IndexPage = ( props ) => {
 
                     <div>
 
-                        <h1 className="text-3xl mb-5 sm:text-5xl md:text-3xl xl:text-5xl">We are <span className="text-teal-500">League</span>.</h1>
+                        <h1 className="text-3xl mb-5 sm:text-5xl md:text-3xl xl:text-5xl" dangerouslySetInnerHTML={{ __html: props.data.datoCmsHome.heroHeadline }} />
 
-                        <p className="font-MRbold leading-loose max-w-md lg:max-w-md sm:text-lg md:text-base xl:text-xl">We pair beautifully designed websites with brilliant online marketing to help your business grow.</p>
+                        <p className="font-MRbold leading-loose max-w-md lg:max-w-md sm:text-lg md:text-base xl:text-xl">{props.data.datoCmsHome.heroIntro}</p>
 
                         <AniLink
                             paintDrip
@@ -59,7 +59,7 @@ const IndexPage = ( props ) => {
 
                       <DesktopNavItems />
 
-                      <BackgroundImage fluid={props.data.heroBg.childImageSharp.fluid} className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover" />
+                      <BackgroundImage fluid={props.data.datoCmsHome.heroImage.fluid} className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover" />
 
                 </div>
 
@@ -71,9 +71,9 @@ const IndexPage = ( props ) => {
 
                     <div className="w-full my-5 lg:mb-0 lg:w-1/3 xl:p-10">
 
-                        <h2 className="text-2xl lg:text-3xl lg:mb-4">Recent projects</h2>
+                        <h2 className="text-2xl lg:text-3xl lg:mb-4">{props.data.datoCmsHome.recentProjectsHeading}</h2>
 
-                        <p className="lg:text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam hendrerit eget libero quis volutpat. Nunc ac ornare sem. Ut placerat vitae ex ut rhoncus.</p>
+                        <p className="lg:text-lg">{props.data.datoCmsHome.recentProjectsIntro}</p>
 
                         <AniLink
                             paintDrip
@@ -159,7 +159,7 @@ const IndexPage = ( props ) => {
 export default IndexPage;
 
 export const pageQuery = graphql`
-  query {
+  query IndexQuery {
     heroBg: file(relativePath: { eq: "hero-bg.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1000) {
@@ -199,6 +199,17 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    datoCmsHome {
+      heroHeadline
+      heroIntro
+      recentProjectsHeading
+      recentProjectsIntro
+      heroImage {
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
         }
       }
     }

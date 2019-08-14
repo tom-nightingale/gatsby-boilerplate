@@ -5,11 +5,11 @@ import BackgroundImage from 'gatsby-background-image'
 
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import PageHeader from "../../components/PageHeader"
-import ContactForm from "../../components/ContactForm"
-import NavigationHolder from "../../components/nav/NavigationHolder"
+import PageHeader from "../components/PageHeader"
+import ContactForm from "../components/ContactForm"
+import NavigationHolder from "../components/nav/NavigationHolder"
 
-import LeagueIconBeige from "../../svg/league-icon-beige.svg"
+import LeagueIconBeige from "../svg/league-icon-beige.svg"
 
 
 const ProjectsPage = (props) => {
@@ -81,8 +81,6 @@ const ProjectsPage = (props) => {
                     </div>
 
             </div>
-
-
 
             <div className="container max-w-full w-11/12 flex flex-wrap mx-auto py-4 sm:py-8 md:py-12 lg:py-16">
 
