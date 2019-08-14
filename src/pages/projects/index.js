@@ -102,7 +102,7 @@ const ProjectsPage = (props) => {
 
                                 <AniLink
                                     to={project.url}
-                                    className="cursor-pointer relative overflow-hidden bg-cover bg-center group bg-beige-100"
+                                    className="block cursor-pointer relative overflow-hidden bg-cover bg-center group bg-beige-100"
                                     paintDrip
                                     duration={.75}
                                     hex="#1BB6BA">
