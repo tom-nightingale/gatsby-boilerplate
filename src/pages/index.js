@@ -13,6 +13,7 @@ import ContactForm from "../components/ContactForm.js"
 import LeagueLogoText from "../svg/league-logo-text.svg"
 
 const IndexPage = ( props ) => {
+    console.log(props);
 
     return (
 
@@ -96,16 +97,16 @@ const IndexPage = ( props ) => {
 
                         <div className="bg-teal-500 text-beige-100 p-6 w-full md:w-1/2 md:p-10 xl:p-20">
 
-                            <h2 className="text-xl lg:text-2xl mb-4">Esland Care</h2>
+                            <h2 className="text-xl lg:text-2xl mb-4">{props.data.allDatoCmsProject.edges[0].node.heroHeadline}</h2>
 
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor molestiae quidem dolore qui a optio earum maxime magni eius, quas, explicabo ea quo? Minima, veniam. Blanditiis soluta numquam, ullam sequi?</p>
+                            <div dangerouslySetInnerHTML={{ __html: props.data.allDatoCmsProject.edges[0].node.excerpt }} />
 
                             <AniLink
                                 paintDrip
                                 duration={.75}
                                 hex="#FEFAEF"
                                 className="mt-4 mb-4 text-beige-100 link-underline link-beige"
-                                to="/projects/esland-care">
+                                to={`/projects/${props.data.allDatoCmsProject.edges[0].node.slug}`}>
                                 View project
                             </AniLink>
                         </div>
@@ -210,6 +211,23 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
+        }
+      }
+    }
+    allDatoCmsProject(limit: 1) {
+      edges {
+        node {
+          projectName
+          projectUrl
+          content
+          heroHeadline
+          excerpt
+          slug
+          mainImage {
+            fluid(imgixParams: {maxW: 600, fm: "jpg", auto: "compress"}) {
+              ...GatsbyDatoCmsSizes
+            }
+          }
         }
       }
     }
