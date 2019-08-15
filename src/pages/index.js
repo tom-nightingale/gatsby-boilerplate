@@ -91,7 +91,7 @@ const IndexPage = ( props ) => {
 
                         <BackgroundImage
                             className="home-project-image bg-cover bg-center py-40 w-full bg-beige-100"
-                            fluid={props.data.eslandCare.childImageSharp.fluid}
+                            fluid={props.data.allDatoCmsProject.edges[0].node.mainImage.fluid}
                             >
                         </BackgroundImage>
 

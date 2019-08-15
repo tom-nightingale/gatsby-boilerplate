@@ -7,7 +7,7 @@ import ContactForm from "../components/ContactForm"
 import PageHeader from "../components/PageHeader"
 import NavigationHolder from "../components/nav/NavigationHolder"
 
-const ProjectsPage = ({props, data}) => {
+const ProjectsPage = ( props ) => {
 
     //Declare projects dataset
     const project = {
