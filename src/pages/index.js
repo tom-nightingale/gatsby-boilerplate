@@ -6,9 +6,9 @@ import BackgroundImage from "gatsby-background-image"
 import { motion } from "framer-motion"
 import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 
-import NavigationHolder from "../components/nav/NavigationHolder"
-import DesktopNavItems from "../components/nav/DesktopNavItems"
-import ImageCard from "../components/ImageCard"
+import NavigationHolder from "../components/nav/NavigationHolder.js"
+import DesktopNavItems from "../components/nav/DesktopNavItems.js"
+import ImageCard from "../components/ImageCard.js"
 import ContactForm from "../components/ContactForm.js"
 import LeagueLogoText from "../svg/league-logo-text.svg"
 
