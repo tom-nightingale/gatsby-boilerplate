@@ -14,6 +14,7 @@ import LeagueLogoText from "../svg/league-logo-text.svg"
 
 const IndexPage = ( props ) => {
     console.log(props);
+    const imageCards = props.data.allDatoCmsHome.edges[0].node.imagecards;
 
     return (
 
@@ -145,9 +146,13 @@ const IndexPage = ( props ) => {
 
             <div className="container max-w-full flex flex-wrap my-4 lg:my-16 px-4 md:px-0">
 
-                <ImageCard heading="Strategy" intro="How we start every project" img={props.data.strategyBg} alt="" />
-                <ImageCard heading="Development" intro="Built with the latest standards" img={props.data.developmentBg} alt="" />
-                <ImageCard heading="Results" intro="Continual analysis to achieve your goals" img={props.data.resultsBg} alt=""/>
+              {
+                imageCards.map(function(card) {
+                  return(
+                    <ImageCard heading={card.heading} intro={card.intro} url={card.url} img={card.image.fluid} />
+                  )
+                })
+              }
 
             </div>
 
@@ -200,6 +205,22 @@ export const pageQuery = graphql`
       childImageSharp {
         fluid(maxWidth: 1000) {
           ...GatsbyImageSharpFluid
+        }
+      }
+    },
+    allDatoCmsHome {
+      edges {
+        node {
+          imagecards {
+            heading
+            intro
+            url
+            image {
+              fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+                ...GatsbyDatoCmsSizes
+              }
+            }
+          }
         }
       }
     },
