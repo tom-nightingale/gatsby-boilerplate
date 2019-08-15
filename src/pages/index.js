@@ -57,7 +57,7 @@ const IndexPage = ( props ) => {
 
                 </BackgroundImage>
 
-                <div className="md:w-1/2 lg:w-3/5 lg:pl-16 lg:min-h-screen">
+                <div className="md:w-1/2 lg:w-3/5 lg:pl-16">
 
                       <DesktopNavItems />
 
@@ -188,12 +188,12 @@ export const pageQuery = graphql`
       recentProjectsHeading
       recentProjectsIntro
       heroImage {
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 1200, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       },
       leftImage {
-        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+        fluid(maxWidth: 1200, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
       }

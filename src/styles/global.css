@@ -179,7 +179,6 @@ nav a[aria-current="page"] {
     .home-league-image {
         @apply w-1/2;
         @apply p-12;
-        @apply min-h-screen;
     }
 
     .home-project-image {
@@ -222,6 +221,10 @@ nav a[aria-current="page"] {
 @screen lg {
     .home-league-image {
         @apply w-2/5;
+    }
+
+    .home-hero-image {
+      @apply min-h-screen;
     }
 }
 
