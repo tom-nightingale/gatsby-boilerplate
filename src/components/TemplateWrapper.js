@@ -24,14 +24,18 @@ const TemplateWrapper = ({ children }) => (
       }
     `}
   render={data => (
+
     <div>
 
-      <HelmetDatoCms
-        favicon={data.datoCmsSite.faviconMetaTags}
-        seo={data.datoCmsHome.seoMetaTags}
-      />
+        <HelmetDatoCms
+          favicon={data.datoCmsSite.faviconMetaTags}
+          seo={data.datoCmsHome.seoMetaTags}
+        />
+
         {children}
+
         <Footer />
+
     </div>
 
     )}

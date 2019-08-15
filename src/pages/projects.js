@@ -3,9 +3,9 @@ import { graphql } from "gatsby"
 import BackgroundImage from 'gatsby-background-image'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import PageHeader from "../components/PageHeader"
-import ContactForm from "../components/ContactForm"
-import NavigationHolder from "../components/nav/NavigationHolder"
+import PageHeader from "../components/PageHeader.js"
+import ContactForm from "../components/ContactForm.js"
+import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 import LeagueIconBeige from "../svg/league-icon-beige.svg"
 

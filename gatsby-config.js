@@ -27,6 +27,14 @@ module.exports = {
           path: `${__dirname}/src/img/`
         }
     },
+    {
+        resolve: 'gatsby-plugin-react-svg',
+        options: {
+          rule: {
+            include: /svg/
+          }
+        }
+    },
     `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-purgecss`,
@@ -37,14 +45,6 @@ module.exports = {
         whitelist: ['whitelist'], // Don't remove this selector
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders
       }
-    },
-    {
-        resolve: 'gatsby-plugin-react-svg',
-        options: {
-          rule: {
-            include: /svg/
-          }
-        }
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

@@ -179,9 +179,6 @@ nav a[aria-current="page"] {
     .home-league-image {
         @apply w-1/2;
         @apply p-12;
-    }
-
-    .home-hero-image {
         @apply min-h-screen;
     }
 
