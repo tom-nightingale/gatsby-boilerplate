@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-import ContactForm from "../components/ContactForm"
-import PageHeader from "../components/PageHeader"
-import NavigationHolder from "../components/nav/NavigationHolder"
-
 import { IoIosMailUnread, IoIosChatbubbles } from "react-icons/io"
+
+import ContactForm from "../components/ContactForm.js"
+import PageHeader from "../components/PageHeader.js"
+import NavigationHolder from "../components/nav/NavigationHolder.js"
+
 
 const ContactPage = (props) => {
 

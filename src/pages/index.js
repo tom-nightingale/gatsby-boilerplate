@@ -1,10 +1,10 @@
 import React from "react"
 
 import { graphql } from "gatsby"
-import { motion } from "framer-motion"
-import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import BackgroundImage from "gatsby-background-image"
+import { motion } from "framer-motion"
+import { IoIosMailUnread, IoIosCode, IoMdMegaphone, IoMdSync } from "react-icons/io";
 
 import NavigationHolder from "../components/nav/NavigationHolder"
 import DesktopNavItems from "../components/nav/DesktopNavItems"
@@ -13,7 +13,7 @@ import ContactForm from "../components/ContactForm.js"
 import LeagueLogoText from "../svg/league-logo-text.svg"
 
 const IndexPage = ( props ) => {
-    console.log(props);
+
     const imageCards = props.data.allDatoCmsHome.edges[0].node.imagecards;
 
     return (
@@ -25,7 +25,7 @@ const IndexPage = ( props ) => {
             <div className="relative z-10 container max-w-full md:flex md:flex-wrap md:items-start mx-auto overflow-hidden">
 
                 <BackgroundImage
-                    fluid={props.data.leagueBg.childImageSharp.fluid}
+                    fluid={props.data.datoCmsHome.leftImage.fluid}
                     className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
                   >
 
@@ -166,48 +166,6 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query IndexQuery {
-    heroBg: file(relativePath: { eq: "hero-bg.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    eslandCare: file(relativePath: { eq: "esland-care.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-    leagueBg: file(relativePath: { eq: "league-bg.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    strategyBg: file(relativePath: { eq: "strategy-bg.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    developmentBg: file(relativePath: { eq: "development-bg.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
-    resultsBg: file(relativePath: { eq: "results-bg.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 1000) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    },
     allDatoCmsHome {
       edges {
         node {
@@ -230,6 +188,11 @@ export const pageQuery = graphql`
       recentProjectsHeading
       recentProjectsIntro
       heroImage {
+        fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
+          ...GatsbyDatoCmsSizes
+        }
+      },
+      leftImage {
         fluid(maxWidth: 600, imgixParams: { fm: "jpg", auto: "compress" }) {
           ...GatsbyDatoCmsSizes
         }
