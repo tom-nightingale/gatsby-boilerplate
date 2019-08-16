@@ -26,8 +26,7 @@ const IndexPage = ( props ) => {
 
                 <BackgroundImage
                     fluid={props.data.datoCmsHome.leftImage.fluid}
-                    className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100"
-                  >
+                    className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
 
                     <motion.a className="w-32">
                         <LeagueLogoText className="inline-block"/>

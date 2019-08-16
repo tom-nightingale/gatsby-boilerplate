@@ -25,7 +25,7 @@ const TemplateWrapper = ({ children }) => (
     `}
   render={data => (
 
-    <div>
+    <>
 
         <HelmetDatoCms
           favicon={data.datoCmsSite.faviconMetaTags}
@@ -36,7 +36,7 @@ const TemplateWrapper = ({ children }) => (
 
         <Footer />
 
-    </div>
+    </>
 
     )}
   />
