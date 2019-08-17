@@ -16,8 +16,6 @@ import LeagueLogoText from "../svg/league-logo-text.svg"
 
 const IndexPage = ( props ) => {
 
-    console.log(props);
-
     const imageCards = props.data.allDatoCmsHome.edges[0].node.imagecards;
 
     return (

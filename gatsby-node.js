@@ -14,6 +14,13 @@ exports.createPages = ({ graphql, actions }) => {
               slug
             }
           }
+        },
+        service: allDatoCmsService {
+          edges {
+            node {
+              slug
+            }
+          }
         }
       }
     `).then(result => {
@@ -24,6 +31,15 @@ exports.createPages = ({ graphql, actions }) => {
           component: path.resolve(`./src/templates/project.js`),
           context: {
             slug: project.slug,
+          },
+        })
+      });
+      result.data.service.edges.map(({ node: service }) => {
+        createPage({
+          path: `services/${service.slug}`,
+          component: path.resolve(`./src/templates/service.js`),
+          context: {
+            slug: service.slug,
           },
         })
       });
