@@ -13,8 +13,6 @@ import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 const ProjectsPage = ( props ) => {
 
-    console.log(props);
-
     const galleryImages = props.data.datoCmsProject.gallery;
     const websiteFeatures = props.data.datoCmsProject.websiteFeatures;
 
