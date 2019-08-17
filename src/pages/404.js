@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import BackgroundImage from 'gatsby-background-image'
 import AniLink from "gatsby-plugin-transition-link/AniLink"

@@ -11,14 +11,20 @@ const TemplateWrapper = ({ children }) => (
         datoCmsSite {
           globalSeo {
             siteName
+            titleSuffix
+            twitterAccount
+            facebookPageUrl
+            fallbackSeo {
+              title
+              description
+              image {
+                url
+              }
+              twitterCard
+            }
           }
           faviconMetaTags {
             ...GatsbyDatoCmsFaviconMetaTags
-          }
-        }
-        datoCmsHome {
-          seoMetaTags {
-              ...GatsbyDatoCmsSeoMetaTags
           }
         }
       }
@@ -27,10 +33,7 @@ const TemplateWrapper = ({ children }) => (
 
     <>
 
-        <HelmetDatoCms
-          favicon={data.datoCmsSite.faviconMetaTags}
-          seo={data.datoCmsHome.seoMetaTags}
-        />
+        <HelmetDatoCms favicon={data.datoCmsSite.faviconMetaTags} />
 
         {children}
 
