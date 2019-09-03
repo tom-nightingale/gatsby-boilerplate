@@ -57,11 +57,12 @@ const ServicesPage = (props) => {
                                 paintDrip
                                 duration={.75}
                                 hex="#1BB6BA"
+                                className="block group"
                                 >
 
                                 <BackgroundImage fluid={service.node.mainImage.fluid} className="block">
 
-                                  <div className="cursor-pointer relative top-0 left-0 transition-all transition-750 text-beige-100 text-center p-8 flex flex-wrap flex-col content-center justify-center w-full bg-navy-500 opacity-75 min-h-64 lg:min-h-128">
+                                  <div className="cursor-pointer relative top-0 left-0 transition-all transition-750 text-beige-100 text-center p-8 flex flex-wrap flex-col content-center justify-center w-full bg-navy-500 opacity-75 group-hover:opacity-95 min-h-64 lg:min-h-128">
 
                                       <LeagueIconBeige className="w-8 mx-auto mb-4"/>
 
@@ -105,7 +106,7 @@ export const pageQuery = graphql`
         }
       }
     },
-    allDatoCmsService {
+    allDatoCmsService(sort: {order: ASC, fields: slug}) {
       edges {
         node {
           slug
