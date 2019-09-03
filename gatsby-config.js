@@ -40,7 +40,7 @@ module.exports = {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true,
-        develop: true, // Enable while using `gatsby develop`
+        develop: false, // Enable while using `gatsby develop`
         tailwind: true,
         whitelist: ['whitelist', 'tl-edges', 'tl-wrapper', 'tl-wrapper + tl-wrapper'] // Don't remove this selector
         // purgeOnly : ['components/', '/main.css', 'bootstrap/'], // Purge only these files/folders

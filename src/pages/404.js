@@ -16,6 +16,8 @@ const NotFoundPage = (props) => {
 
         <>
 
+            <HelmetDatoCms seo={props.data.datoCmsHome.seoMetaTags} />
+
             <NavigationHolder />
 
             <PageHeader img={props.data.leagueBg.childImageSharp.fluid} />

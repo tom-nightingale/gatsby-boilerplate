@@ -10,10 +10,6 @@ const TemplateWrapper = ({ children }) => (
       {
         datoCmsSite {
           globalSeo {
-            siteName
-            titleSuffix
-            twitterAccount
-            facebookPageUrl
             fallbackSeo {
               title
               description

@@ -10,10 +10,9 @@ import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 import LeagueIconBeige from "../svg/league-icon-beige.svg"
 
-
 const ServicesPage = (props) => {
 
-    console.log(props);
+    // console.log(props);
     const services = props.data.allDatoCmsService.edges;
 
     return (
@@ -36,48 +35,51 @@ const ServicesPage = (props) => {
                       <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">League Digital</h2>
                       <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{props.data.datoCmsServicesMain.heroHeadline}</p>
                       <div dangerouslySetInnerHTML={{ __html: props.data.datoCmsServicesMain.content }} />
-                      <AniLink
-                          to={`/projects/${props.data.allDatoCmsService.edges[0].node.slug}`}
-                          className="link-underline link-teal"
-                          paintDrip
-                          duration={.75}
-                          hex="#1BB6BA">View project
-                      </AniLink>
                   </div>
 
           </div>
 
-          <div className="container max-w-full w-11/12 flex flex-wrap mx-auto py-4 sm:py-8 md:py-12 lg:py-16">
+          <div className="container max-w-full w-11/12 mx-auto py-4 sm:py-8 md:py-12 lg:py-16">
 
-              <h2 className="w-full text-center text-2xl ">We specialise in...</h2>
+              <h2 className="text-center text-2xl ">We specialise in...</h2>
 
-              {
-                  services.map(function(service) {
+              <div className="w-full flex flex-wrap justify-between">
 
-                      return (
+                {
+                    services.map(function(service) {
 
-                          <div key={service.node.serviceName}>
+                        return (
 
-                              <AniLink
-                                  to={`/services/${service.node.slug}`}
-                                  className=""
-                                  paintDrip
-                                  duration={.75}
-                                  hex="#1BB6BA">
+                          <div key={service.node.serviceName} className="block w-full sm:w-1/2 lg:w-1/3 p-4 md:p-8 mb-4">
 
+                            <AniLink
+                                to={`/services/${service.node.slug}`}
+                                paintDrip
+                                duration={.75}
+                                hex="#1BB6BA"
+                                >
 
-                                  <BackgroundImage fluid={service.node.mainImage.fluid}>
+                                <BackgroundImage fluid={service.node.mainImage.fluid} className="block">
 
-                                    <h2>{service.node.serviceName}</h2>
+                                  <div className="cursor-pointer relative top-0 left-0 transition-all transition-750 text-beige-100 text-center p-8 flex flex-wrap flex-col content-center justify-center w-full bg-navy-500 opacity-75 min-h-64 lg:min-h-128">
 
-                                  </BackgroundImage>
+                                      <LeagueIconBeige className="w-8 mx-auto mb-4"/>
 
-                              </AniLink>
+                                      <h2 className="text-2xl lg:mb-4 text-beige-100">{service.node.serviceName}</h2>
+
+                                  </div>
+
+                                </BackgroundImage>
+
+                            </AniLink>
 
                           </div>
-                      )
-                  })
-              }
+
+                        )
+                    })
+                }
+
+              </div>
 
           </div>
 

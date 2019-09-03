@@ -17,7 +17,7 @@ const navItems = {
     "Home" : "/",
     "Services" : "/services",
     "Web design" : "/services/web-design",
-    "Web development" : "/services/web-developpment",
+    "Web development" : "/services/web-development",
     "SEO" : "/services/seo",
     "PPC" : "/services/ppc",
     "Content marketing" : "/services/content-marketing",
