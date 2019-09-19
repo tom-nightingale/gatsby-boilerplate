@@ -59,6 +59,11 @@ export const pageQuery = graphql`
           ...GatsbyImageSharpFluid
         }
       }
+    },
+    datoCmsHome {
+      seoMetaTags {
+        ...GatsbyDatoCmsSeoMetaTags
+      }
     }
   }
 `;
