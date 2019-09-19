@@ -13,7 +13,6 @@ import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 const ProjectsPage = (props) => {
 
-
     //Declare projects dataset
     const projects = props.data.allDatoCmsProject.edges;
 

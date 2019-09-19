@@ -11,12 +11,7 @@ import PageHeader from "../components/PageHeader.js"
 import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 
-// const ProjectsPage = ( props ) => {
 class ProjectsPage extends React.Component {
-
-  // constructor(props) {
-  //   super(props);
-  // }
 
   componentDidMount() {
     const links = document.querySelectorAll("a[href$='/projects']");

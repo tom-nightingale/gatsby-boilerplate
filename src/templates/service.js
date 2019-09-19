@@ -9,9 +9,6 @@ import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 
 class ServicePage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
 
   componentDidMount() {
     const links = document.querySelectorAll("a[href$='/services']");
