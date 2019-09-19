@@ -5,7 +5,7 @@ const ContactForm = () => {
         <div className="container max-w-full my-8 lg:my-24 px-4 md:px-0 text-center">
 
             <div className="max-w-xl mx-auto">
-                <h2 className="font-MRextrabold text-lg md:text-2xl lg:text-3xl mb-4">We want to work with you. <span className="block">Let's build something together</span></h2>
+                <h2 className="font-MRextrabold text-lg md:text-2xl lg:text-3xl mb-4">We want to work with you. <span className="block">Let's build something together.</span></h2>
                 <p className="lg:text-lg">Let's form a partnership to help build an online solution that you're proud to call your own</p>
             </div>
 

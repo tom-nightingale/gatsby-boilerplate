@@ -170,30 +170,8 @@ nav a[aria-current="page"] {
         }
     }
 
-    header {
-        @apply flex;
-        @apply flex-wrap;
-        @apply justify-between;
-    }
 
-    .home-league-image {
-        @apply w-1/2;
-        @apply p-12;
-    }
-
-    .home-project-image {
-        @apply w-1/2;
-        @apply py-0;
-    }
-
-    .home-bucket {
-        @apply w-2/6;
-    }
-
-    .latest-project {
-        @apply w-1/3
-    }
-
+    /* Navigation */
     .nav__button {
         display: flex;
         top: 45px;
@@ -216,20 +194,18 @@ nav a[aria-current="page"] {
             transition: .5s;
         }
     }
-}
 
-@screen lg {
-    .home-league-image {
-        @apply w-2/5;
-    }
 
-    .home-hero-image {
-      @apply min-h-screen;
-    }
-}
+    /*Project list for projects page */
+    .project-container {
+      .project-container__content {
+        order: 1;
+      }
 
-@screen xl {
-    .latest-project {
-        @apply w-1/2;
+      &:nth-of-type(even) {
+        .project-container__content {
+          order: -1;
+        }
+      }
     }
 }

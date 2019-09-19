@@ -6,7 +6,7 @@ const ImageCard = (props) => {
     return (
         <BackgroundImage
             fluid={props.img}
-            className="home-bucket relative overflow-hidden w-full border-gray-100 border cursor-pointer min-h-96 group"
+            className="home-bucket relative overflow-hidden w-full border-gray-100 border cursor-pointer min-h-96 group md:w-1/3"
         >
 
             <AniLink

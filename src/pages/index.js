@@ -30,7 +30,7 @@ const IndexPage = ( props ) => {
 
               <BackgroundImage
                   fluid={props.data.datoCmsHome.leftImage.fluid}
-                  className="home-league-image bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100">
+                  className="bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100 md:w-1/2 md:p-12 lg:w-2/5">
 
                   <motion.a className="w-32">
                       <LeagueLogoText className="inline-block"/>
@@ -64,7 +64,7 @@ const IndexPage = ( props ) => {
 
                     <DesktopNavItems />
 
-                    <BackgroundImage fluid={props.data.datoCmsHome.heroImage.fluid} className="home-hero-image min-h-50 bg-gray-200 bg-center bg-cover" />
+                    <BackgroundImage fluid={props.data.datoCmsHome.heroImage.fluid} className="min-h-50 bg-gray-200 bg-center bg-cover lg:min-h-screen" />
 
               </div>
 
@@ -94,7 +94,7 @@ const IndexPage = ( props ) => {
                   <div className="flex flex-wrap w-full lg:w-2/3 lg:pl-5">
 
                       <BackgroundImage
-                          className="home-project-image bg-cover bg-center py-40 w-full bg-beige-100"
+                          className="home-project-image bg-cover bg-center py-40 w-full bg-beige-100 md:w-1/2 md:py-0"
                           fluid={props.data.allDatoCmsProject.edges[0].node.mainImage.fluid}
                           >
                       </BackgroundImage>

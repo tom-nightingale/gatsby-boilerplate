@@ -8,29 +8,39 @@ import PageHeader from "../components/PageHeader.js"
 import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 
-const ServicePage = ( props ) => {
+class ServicePage extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    const links = document.querySelectorAll("a[href*='/services']");
+    links.forEach(each => (each.setAttribute('aria-current', 'page')));
+  }
+
+  render() {
 
     return (
 
         <>
 
-          <HelmetDatoCms seo={props.data.datoCmsService.seoMetaTags} />
+          <HelmetDatoCms seo={this.props.data.datoCmsService.seoMetaTags} />
 
           <NavigationHolder />
 
           <PageHeader
-              img={props.data.datoCmsService.mainImage.fluid}
-              heroTitle={props.data.datoCmsService.heroHeadline} />
+              img={this.props.data.datoCmsService.mainImage.fluid}
+              heroTitle={this.props.data.datoCmsService.heroHeadline} />
 
           <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">
 
-              <BackgroundImage className="latest-project w-full" fluid={props.data.datoCmsService.mainImage.fluid}>
+              <BackgroundImage className="latest-project w-full" fluid={this.props.data.datoCmsService.mainImage.fluid}>
               </BackgroundImage>
 
                 <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
                     <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">Our Services</h2>
-                    <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{props.data.datoCmsService.serviceName}</p>
-                    <div dangerouslySetInnerHTML={{ __html: props.data.datoCmsService.content }}></div>
+                    <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{this.props.data.datoCmsService.serviceName}</p>
+                    <div dangerouslySetInnerHTML={{ __html: this.props.data.datoCmsService.content }}></div>
                 </div>
 
           </div>
@@ -39,7 +49,9 @@ const ServicePage = ( props ) => {
 
         </>
 
-    );
+    )
+
+  }
 }
 
 export default ServicePage;

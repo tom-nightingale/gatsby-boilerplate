@@ -29,6 +29,8 @@ const MenuItem = ({ link, name }) => {
     >
         <Link to={link} className="block font-MRextrabold py-2 text-lg text-teal-600">{name}</Link>
     </motion.div>
+
+
   );
 };
 

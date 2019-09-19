@@ -18,7 +18,7 @@ const PageHeader = (props) => {
         <BackgroundImage
             Tag = "header"
             fluid={props.img}
-            className="relative container max-w-full bg-cover bg-center bg-multiply mx-auto bg-navy-600"
+            className="relative container max-w-full bg-cover bg-center bg-multiply mx-auto bg-navy-600 md:flex flex-wrap justify-between"
         >
 
             <div className="md:w-1/2 lg:w-2/12 p-10 py-8 md:p-12 flex flex-wrap flex-col text-beige-100">
