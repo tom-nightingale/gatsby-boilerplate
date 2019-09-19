@@ -14,12 +14,12 @@ import NavigationHolder from "../components/nav/NavigationHolder.js"
 // const ProjectsPage = ( props ) => {
 class ProjectsPage extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
-    const links = document.querySelectorAll("a[href*='/projects']");
+    const links = document.querySelectorAll("a[href$='/projects']");
     links.forEach(each => (each.setAttribute('aria-current', 'page')));
   }
 
@@ -49,7 +49,7 @@ class ProjectsPage extends React.Component {
                     <a className="link-underline link-teal" href={this.props.data.datoCmsProject.projectUrl} target="_blank" rel="noopener noreferrer">View live website</a>
                 </div>
 
-                <BackgroundImage className="w-full min-h-screen md:w-1/3 xl:w-1/2" fluid={this.props.data.datoCmsProject.mainImage.fluid}>
+                <BackgroundImage className="min-h-25 w-full md:min-h-screen md:w-1/3 xl:w-1/2" fluid={this.props.data.datoCmsProject.mainImage.fluid}>
                 </BackgroundImage>
 
           </div>

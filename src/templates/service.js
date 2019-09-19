@@ -9,12 +9,12 @@ import NavigationHolder from "../components/nav/NavigationHolder.js"
 
 
 class ServicePage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   componentDidMount() {
-    const links = document.querySelectorAll("a[href*='/services']");
+    const links = document.querySelectorAll("a[href$='/services']");
     links.forEach(each => (each.setAttribute('aria-current', 'page')));
   }
 
@@ -30,11 +30,11 @@ class ServicePage extends React.Component {
 
           <PageHeader
               img={this.props.data.datoCmsService.mainImage.fluid}
-              heroTitle={this.props.data.datoCmsService.heroHeadline} />
+               />
 
           <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">
 
-              <BackgroundImage className="w-full min-h-screen md:w-1/3 xl:w-1/2" fluid={this.props.data.datoCmsService.mainImage.fluid}>
+              <BackgroundImage className="min-h-25 w-full md:min-h-screen md:w-1/3 xl:w-1/2" fluid={this.props.data.datoCmsService.mainImage.fluid}>
               </BackgroundImage>
 
                 <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
