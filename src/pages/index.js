@@ -1,6 +1,6 @@
 import React from "react"
 
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import BackgroundImage from "gatsby-background-image"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
@@ -32,9 +32,12 @@ const IndexPage = ( props ) => {
                   fluid={props.data.datoCmsHome.leftImage.fluid}
                   className="bg-multiply bg-cover bg-center min-h-screen p-10 py-8 flex flex-wrap flex-col justify-between bg-navy-600 text-beige-100 md:w-1/2 md:p-12 lg:w-2/5">
 
-                  <motion.a className="w-32">
-                      <LeagueLogoText className="inline-block"/>
-                  </motion.a>
+                  <AniLink
+                      paintDrip
+                      duration={.75}
+                      hex="#1BB6BA"
+                      to="/"
+                      className="w-32"><LeagueLogoText className="inline-block"/></AniLink>
 
                   <div>
 
