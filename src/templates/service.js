@@ -34,7 +34,7 @@ class ServicePage extends React.Component {
 
           <div className="container max-w-full w-full md:p-16 md:flex flex-wrap md:px-0">
 
-              <BackgroundImage className="latest-project w-full" fluid={this.props.data.datoCmsService.mainImage.fluid}>
+              <BackgroundImage className="w-full min-h-screen md:w-1/3 xl:w-1/2" fluid={this.props.data.datoCmsService.mainImage.fluid}>
               </BackgroundImage>
 
                 <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
