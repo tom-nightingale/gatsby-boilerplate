@@ -9,7 +9,7 @@ const ContactForm = () => {
                 <p className="lg:text-lg">Let's form a partnership to help build an online solution that you're proud to call your own.</p>
             </div>
 
-            <form className="w-full mx-auto my-8 md:flex md:flex-wrap md:justify-between xl:px-20" name="Contact Form" action="#" data-netlify="true">
+            <form className="w-full mx-auto my-8 md:flex md:flex-wrap md:justify-between xl:px-20" method="POST" name="Contact Form" data-netlify="true">
 
                 <label className="block w-full md:w-1/2 lg:w-1/4 my-8 px-4" htmlFor="Name">
                     <span className="block w-full mb-2 font-MRbold">Your name is...</span>
