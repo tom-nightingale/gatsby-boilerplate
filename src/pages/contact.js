@@ -31,7 +31,7 @@ const ContactPage = (props) => {
 
               <a className="flex flex-wrap items-center font-MRbold text-teal-900 justify-center" href="mailto:hello@weareleague.co.uk"><IoIosMailUnread className="text-2xl mr-2"/>hello@weareleague.co.uk</a>
 
-              <a className="mt-4 flex flex-wrap items-center font-MRbold text-teal-900 justify-center" href="tel:01159679443"><IoIosChatbubbles className="text-2xl mr-2"/>0115 9679443</a>
+              <a className="mt-4 flex flex-wrap items-center font-MRbold text-teal-900 justify-center" href="tel:01159679443"><IoIosChatbubbles className="text-2xl mr-2"/>07732 575 227</a>
 
           </div>
 
