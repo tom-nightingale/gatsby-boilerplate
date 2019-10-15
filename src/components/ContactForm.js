@@ -27,7 +27,7 @@ const ContactForm = () => {
                 </label>
 
                 <label className="w-full lg:w-1/4 lg:my-8" htmlFor="Submit">
-                    <input className="w-auto px-4 py-2 lg:px-8 lg:py-3 rounded-sm font-MRextrabold text-beige-100 text-xl bg-teal-500" name="Submit" type="submit" value="Send" />
+                    <button className="w-auto px-4 py-2 lg:px-8 lg:py-3 rounded-sm font-MRextrabold text-beige-100 text-xl bg-teal-500" type="submit">Submit</button>
                 </label>
 
 
