@@ -40,7 +40,7 @@ class ProjectsPage extends React.Component {
                 <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
                     <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">Latest Projects</h2>
                     <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{this.props.data.datoCmsProject.projectName}</p>
-                    <div dangerouslySetInnerHTML={{ __html: this.props.data.datoCmsProject.content }}></div>
+                    <div className="copy" dangerouslySetInnerHTML={{ __html: this.props.data.datoCmsProject.content }}></div>
                     <a className="link-underline link-teal" href={this.props.data.datoCmsProject.projectUrl} target="_blank" rel="noopener noreferrer">View live website</a>
                 </div>
 

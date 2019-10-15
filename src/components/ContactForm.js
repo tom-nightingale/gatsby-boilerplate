@@ -6,7 +6,7 @@ const ContactForm = () => {
 
             <div className="max-w-xl mx-auto">
                 <h2 className="font-MRextrabold text-lg md:text-2xl lg:text-3xl mb-4">We want to work with you. <span className="block">Let's build something together.</span></h2>
-                <p className="lg:text-lg">Let's form a partnership to help build an online solution that you're proud to call your own</p>
+                <p className="lg:text-lg">Let's form a partnership to help build an online solution that you're proud to call your own.</p>
             </div>
 
             <form className="w-full mx-auto my-8 md:flex md:flex-wrap md:justify-between xl:px-20" name="Contact Form" action="#" netlify="true">

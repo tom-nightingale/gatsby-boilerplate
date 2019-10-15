@@ -52,7 +52,9 @@ p {
     @apply text-beige-300;
 }
 
+
 /* Navigation styling */
+
 .nav__background {
     @apply
         absolute
@@ -151,6 +153,21 @@ nav a[aria-current="page"] {
     }
 }
 
+
+.copy {
+    strong {
+        @apply font-MRextrabold;
+    }
+
+    li {
+        @apply relative; 
+        z-index: 1;        
+
+        strong {
+            @apply text-lg;
+        }
+    }
+}
 
 /*Fixes for gatsby background image and tailwind conflicts */
 

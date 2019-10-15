@@ -81,7 +81,7 @@ const IndexPage = ( props ) => {
 
                       <h2 className="text-2xl lg:text-3xl lg:mb-4">{props.data.datoCmsHome.recentProjectsHeading}</h2>
 
-                      <p className="lg:text-lg">{props.data.datoCmsHome.recentProjectsIntro}</p>
+                      <div dangerouslySetInnerHTML={{ __html: props.data.datoCmsHome.recentProjectsIntro }} />
 
                       <AniLink
                           paintDrip

@@ -34,7 +34,7 @@ const ServicesPage = (props) => {
                   <div className="p-8 md:p-12 lg:p-24 xl:p-32 md:w-2/3 xl:w-1/2">
                       <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">League Digital</h2>
                       <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{props.data.datoCmsServicesMain.heroHeadline}</p>
-                      <div dangerouslySetInnerHTML={{ __html: props.data.datoCmsServicesMain.content }} />
+                      <div className="copy" dangerouslySetInnerHTML={{ __html: props.data.datoCmsServicesMain.content }} />
                   </div>
 
           </div>
