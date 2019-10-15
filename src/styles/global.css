@@ -161,10 +161,17 @@ nav a[aria-current="page"] {
 
     li {
         @apply relative; 
-        z-index: 1;        
-
-        strong {
-            @apply text-lg;
+        padding-left: 2rem;
+        
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            background: url('../img/favicon-32x32.png') center left no-repeat;
+            background-size: cover;
         }
     }
 }

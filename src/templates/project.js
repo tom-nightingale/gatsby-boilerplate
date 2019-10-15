@@ -41,7 +41,7 @@ class ProjectsPage extends React.Component {
                     <h2 className="text-teal-500 md:text-teal-300 text-lg md:text-4xl opacity-50">Latest Projects</h2>
                     <p className="text-3xl lg:text-5xl leading-tight mt-2 mb-4 md:mb-8 text-navy-600 font-MRextrabold">{this.props.data.datoCmsProject.projectName}</p>
                     <div className="copy" dangerouslySetInnerHTML={{ __html: this.props.data.datoCmsProject.content }}></div>
-                    <a className="link-underline link-teal" href={this.props.data.datoCmsProject.projectUrl} target="_blank" rel="noopener noreferrer">View live website</a>
+                    <a className="link-underline link-teal mt-8" href={this.props.data.datoCmsProject.projectUrl} target="_blank" rel="noopener noreferrer">View live website</a>
                 </div>
 
                 <BackgroundImage className="min-h-25 w-full md:min-h-screen md:w-1/3 xl:w-1/2" fluid={this.props.data.datoCmsProject.mainImage.fluid}>
