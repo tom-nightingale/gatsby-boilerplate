@@ -127,24 +127,24 @@ const IndexPage = ( props ) => {
           <div className="container max-w-full flex flex-wrap my-4 px-6 lg:my-16">
 
               <div className="mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
-                  <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoIosCode /></span>
-                  <h2 className="text-xl md:text-2xl text-teal-800 mb-2">Plan</h2>
-                  <p className="font-MRbold mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tenetur, temporibus!</p>
-                  <p>Totam nostrum sit dolore vel aliquid quas, qui aperiam illum in. Pariatur deleniti odit consectetur illo consequatur laudantium autem?</p>
+                  <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoMdMegaphone /></span>
+                  <h2 className="text-xl md:text-2xl text-teal-800 mb-2">1. Discovery</h2>
+                  <p className="font-MRbold mb-4">We kick off your project by getting to know you, your business and what you want to achive.</p>
+                  <p>Understanding your business and business goals is fundamental to the success of your project. Consider us the online marketing arm of your business.</p>
               </div>
 
               <div className="mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
-                  <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoMdMegaphone /></span>
-                  <h2 className="text-xl md:text-2xl text-teal-800 mb-2">Develop</h2>
-                  <p className="font-MRbold mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tenetur, temporibus!</p>
-                  <p>Totam nostrum sit dolore vel aliquid quas, qui aperiam illum in. Pariatur deleniti odit consectetur illo consequatur laudantium autem?</p>
+                  <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoIosCode /></span>
+                  <h2 className="text-xl md:text-2xl text-teal-800 mb-2">2. Planning</h2>
+                  <p className="font-MRbold mb-4">We'll plan your online marketing strategy to achieve the best return on investment for your business.</p>
+                  <p>Our plans will only include products and services that will add to your business goals. There's no sales pitch here, if it won't work, we won't suggest it.</p>
               </div>
 
               <div className="flex-grow mb-12 sm:w-1/2 sm:px-4 md:w-1/3 lg:px-12">
                   <span className="inline-block p-4 mb-4 bg-navy-500 text-beige-100 text-2xl rounded-full"><IoMdSync /></span>
-                  <h2 className="text-xl md:text-2xl text-teal-800 mb-2">Market</h2>
-                  <p className="font-MRbold mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, tenetur, temporibus!</p>
-                  <p>Totam nostrum sit dolore vel aliquid quas, qui aperiam illum in. Pariatur deleniti odit consectetur illo consequatur laudantium autem?</p>
+                  <h2 className="text-xl md:text-2xl text-teal-800 mb-2">3. Delivery</h2>
+                  <p className="font-MRbold mb-4">Our projects are set to strict deadlines. You do your bit, and we'll do ours.</p>
+                  <p>A project timeline will be established as part of the planning phase, identifying the need for imagery, content, and assets. This way the project runs smoothly for the both of us.</p>
               </div>
 
 
