@@ -20,6 +20,7 @@ const navItems = {
     "Web development" : "/services/web-development",
     "SEO" : "/services/seo",
     "PPC" : "/services/ppc",
+    "Social Marketing" : "/services/social-marketing",
     "Copywriting" : "/services/copywriting",
     "Projects" : "/projects",
     "Contact" : "/contact",
