@@ -36,11 +36,11 @@ const Footer = (props) => {
 
                 <div className="flex flex-wrap justify-center md:justify-start">
 
-                    <Link to="/" className="inline mx-2 text-3xl hover:text-teal-500 transition-all transition-250"><IoLogoTwitter /></Link>
+                    {/* <Link to="/" className="inline mx-2 text-3xl hover:text-teal-500 transition-all transition-250"><IoLogoTwitter /></Link> */}
 
-                    <Link to="/" className="inline mx-2 text-3xl hover:text-teal-500 transition-all transition-250"><IoLogoInstagram /></Link>
+                    <a href="https://www.instagram.com/weareleague.co.uk/" className="inline mx-2 text-3xl hover:text-teal-500 transition-all transition-250"><IoLogoInstagram /></a>
 
-                    <Link to="/" className="inline mx-2 text-3xl hover:text-teal-500 transition-all transition-250"><IoLogoLinkedin /></Link>
+                    {/* <Link to="/" className="inline mx-2 text-3xl hover:text-teal-500 transition-all transition-250"><IoLogoLinkedin /></Link> */}
 
                 </div>
 
